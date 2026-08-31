@@ -232,9 +232,127 @@ Non-Repudiation: You cant deny what you said
     - Reccomendation for meething the baseline
 
 #### Summary / Things to Know
-
+- Goes over all aspects of a Gap Analysis
+- Understand the steps in conducting a Gap Analysis
 
 
 ### 1.2 - Zero Trust
+Many networks are relatively open on the inside and once through there are generally few security controls
+
+Zero trust is a holistic approach to Network Security, every device, every process, every person
+
+Everything must be verified
+Nothings is inherently trusted
+
+<u>Controlling Trust</u>
+- Adaptive Identity
+    - Conside source and requested resources
+    - Multiple risk indicators - relationship to org, location, connection etc.
+    - Make authentication stronger if needed
+- Threat scope reduction
+    - Decrease number of possible entry points
+- Policy driven access control
+    - Combine adaptive identity with pre-defined set of rules
+
+<u>Policy Enforcement Point</u>
+- Subjects and systems
+    - End-users, applications, non-human entities
+- PEP (the bookkeeper)
+    - Does not make a decision
+    - Policy decision point does that
+    - Process for making an authentication decision
+- Policy Engine
+    - Grants, denies, revokes resources based on policy and other information sources
+- Policy Administrator
+    - Communicates with Policy Enforcement Point
+    - Generates access tokens or credentials
+    - Tells PEP to allow access or not
+
+<u>Planes of Operation</u>
+- Split Network into functional planes
+- **Data Plane**
+    - Process frames, packets, network data
+    - Processing forwarding, trunking, encryption, NAT
+- **Control Plane**
+    - manages actions of the data plane
+    - Define policies and rules
+    - Determines how packes should be forwarded
+    - ROuting tables, session tables, NAT tables
+
+<u>Security Zones</u>
+- Security is more than a one-to-one relationship
+    - broad categorization provides security related foundation
+    - Where you are comign from and wehere you are going
+        - Trusted Untrused, internal external, VPN 1 5 11, Department of business
+- Some zones may be enough to deny access
+- Some zones are implizitly trusted
+
+
+#### Summary / Things to Know
+- Zero trust is a policy that we use to ensure that nobody is accessing systems that we shouldnt and keeps things in check at everyb step of the way.
+- What are the planes of operation
+- What are the ways to enforce zero trst and why is it a big goal in security
+
+
+### 1.2 - Physical Security
+<u>Barricades / Ballards</u>
+
+
+
+### 1.2 - Deception and Disruption
+<u>Honeypot</u>
+- Attract the bad guys
+    - Trap them
+- Attacker is likely a machine
+    - makes interesting recon
+- Many open source packages
+- Constant battle real vs. fake
+
+<u>Honeynets</u>
+- Build larger deception network with more than one hoenypot
+
+<u>Honeyfiles</u>
+- Attract attackers with more honey
+    - File with fake information
+- Alert sent if file is accessd
+
+<u>Honeytokens</u>
+- Track malicious actors
+    - Add traceable data to honeypot
+    - API credentials
+    - Fake email addresses
+    - Many other examples
+
+
+### 1.3 Change Management
+How to make a change? Upgrade software? Patch an application? Making changes is often one of the most common risks in an enterprise and is often overlooked or ignored need to have clear policies for frequency, install porcess, rollback, and other procedures for handling
+
+**<u>Ownership</u>**
+- An individual or entity needs to make a change
+    - They own the process
+    - Dont perform actual change
+- Owner manages process
+    - Process updates are provided to the owner
+    - Ensures process is followed and acceptable
+- Addtess label printer needs to be upgraded
+    - Shipping and receiving department owens the process
+    - IT handles the actual change
+
+**<u>Change Approval Process</u>**
+- Formal process for managing change
+    - Avoid downtime, confusion, mistakes
+- Typical approval process
+    - Complete request forms
+    - Determine purpose of change
+    - Identify scope of change
+    - Schedule a date and time of change
+    - Determine affected systems and impact
+    - Analyze risk associated with change
+    - Get approval from change control board
+
+**<u>Stakeholders</u>**
+
+
+
 
 
