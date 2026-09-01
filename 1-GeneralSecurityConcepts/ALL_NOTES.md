@@ -351,6 +351,79 @@ How to make a change? Upgrade software? Patch an application? Making changes is 
     - Get approval from change control board
 
 **<u>Stakeholders</u>**
+- Who is impacted by change
+    - They'll want to have input on the change management process
+- May not be as obvious as you think
+    - Simple change can include on individual or entire company
+- Upgrade software used for shipping labels
+    - Shipping/receiving
+    - Accounting
+    - Product delivery
+    - Revenue recognition
+
+**<u>Test Results</u>**
+- Sandbox testing environment
+    - No connections to real server or prod system
+    - Technological safe space
+- use before making prod change
+
+**<u>Maintenance window</u>**
+- When is change happening
+    - Most difficult part of process
+- Overnight or during workday?
+
+
+#### Summary / Things to Know
+- Making changes is often overlooked as people consistently see the benefits in making the change without thinking about the impact
+- How do we implement a good change management process
+- What are the things that we need to consider when making a change and how to we ensure we are minimizing risk
+
+
+
+### 1.3 - Technical Change Management
+**Technical Change Management** : Putting the change management process into action
+__There is no such thing as a simple upgrade__
+
+**<u>Allow / Deny list</u>**
+- Any application can be dangerous
+    - Vulnerabilities, Trojan Horse, malware
+    - Security policy can control app execution
+- Allo List: Nothing can be run unless approved
+    - Very restrictive
+- Deny List: Nothing on bad list can be executed
+    - Anti-virus, anti-malware
+
+**<u>Restricted Activities</u>**
+- Scope of a change is important
+    - Defines exactly which components are covered
+- A change approval isn't permission to make a change
+    - Change control approval is very specific
+- Scope may need to be changed during change window
+
+**<u>Downtime</u>**
+- Services will eventually be unavailable
+    - Change process can be disruptive
+    - Usually scheduled during non-prod hours
+- Minimize downtime or even prevent any downtime if possible
+- Need to inform people about downtime (when to expect, for how long, affected systems)
+
+**<u>Restarts</u>**
+- It's common to require a restart
+    - Implement a new config
+    - Reboot OS
+- Services
+    - Stop and restart service or daemon
+- Applications
+    - Close app completely, launch new app instance
+
+**<u>Legacy Applications</u>**
+- Apps that have been around awhile
+- No longer supported by developer
+    - Document system
+    - Create specific processes and procedures
+
+**<u>Dependencies</u>**
+- "To complete A you must complete B"
 
 
 
