@@ -424,6 +424,25 @@ __There is no such thing as a simple upgrade__
 
 **<u>Dependencies</u>**
 - "To complete A you must complete B"
+- Changing one component will require others
+
+**<u>Documentation</u>**
+- Require with change management process
+- Update diagrams
+- Update policies / procedures
+
+**<u>Version Control</u>**
+- Track changes to a file or config data over time
+- Revert to previous settings
+- Many opportunites to manage versions
+
+#### Summary / Things to Know
+"Technical Change Management" is exactly what it sounds like, the technical side of going through change management and the takeaway from this section should be that you need a good overview of the types of things that you will encounter when going through a change.
+
+- What is downtime
+- How do we implement version control (GitHub) and why is it so important
+- What is an allow or a deny list?
+- If you have programming background where do you see this type of stuff pop up?
 
 
 
