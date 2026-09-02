@@ -446,5 +446,356 @@ __There is no such thing as a simple upgrade__
 
 
 
+### 1.4 - Public Key Infrastructure
+Public key infrastructure is all about the management of an organizations public keys, Policies, procedures, Hardware, software, people, Digital certificate creation, distribution, management, storing, revoking
+
+This is a huge endeavor to take on and takes a lot of planning, there will be binding of public keys to people or devices involving a Certifiate Authority and other factors. The entire basis of this is about establishing trust within a network / organization.
+
+**<u>Symmetric Encruption</u>**
+- Single shared key
+    - Encrypt with a key
+    - Decrypt with the same key
+    - Need abother key if it gets out
+- Secret key algorithm
+    - Shared secret
+- Doesn't scale very well
+    - Challenging to distribute
+- Very fast to use
+    - Less overhead
+
+**<u>Asymmetric Encruption</u>**
+- Public key cryptography
+    - Two or more mathematically related keys
+- Private key kept private
+- Public key anone can use
+- Private key is only key that can be used to decrypt data from public key
+    - Cannot derive public key from private key
+
+**<u>The key pair gpg and pgp</u>**
+- Asymmetric encryption
+    - PKI
+- Key generation
+    - Build both public and private key at the same time
+    - Lots of randomization
+    - Large prime numbers
+
+**<u>Key Escrow</u>**
+- Someone else holds decryption keys
+    - Private keys are in hands of third party
+    - May be within organization
+- Can be legitamete business arrangement
+    - Access to employee ingo
+    - Government agencies need to view data
+    - Maybe controversial but might be required in certain cases
+
+#### Summary / Things to Know
+PKI is the basis of how we build out the use of keys. Keys are crucial for establishing trust within a organization or a network. There are many different ways to do this, but there needs to be an infrastructure in place so that keys cannot be transferred and used at whatever will.
+- What is PKI
+- Public Keys vs. private keys
+- Symmetric vs. Asymmetric encryption
+    - Pros and cons of each
+    - When may a 3rd party be needed
+
+
+### 1.4 - Encrypting data
+Encrypting data is all about protecting data at multiple stages of its use, without encryption your data is readable by anyone that may be able to view or access it. Think about how bad this could be if using important data like financial records or credit card numbers.
+
+**<u>Database Encryption</u>**
+- Protecting stored data
+    - Transmission
+- Transparent encryption
+    - Encrypt all database information with symmetric key
+- Record level encryption
+    - Encrypt individual columns
+    - Use separate symmetric key for each column
+        - Overhead, decryption time, standards
+
+**<u>Transport Encryption</u>**
+- Protect data traversing network
+- Encrypting in the application
+- VPN
+    - Encrypts all data trasmitted over the network regardless of the application
+    - Client based VPN using SSL / TLS
+    - Site-to-site VPN using IPSec
+
+**<u>Encryption Algorithms</u>**
+- Many many different ways to encrypt data
+- Proper "formula" must be used during encryption and descryption
+- Both sides decide on the algorithm before encrypting the data
+    - Details are often hidden from the end user
+- Advantages and disadvantages between algorithms
+    - Security level, speed, complexity of implementation, etc.
+
+**<u>Cryptographic keys</u>**
+- Very little that isn't know about cryptographic process
+    - Just dont know the key
+- The key determines the output
+
+**<u>Key Lengths</u>**
+- Larger keys tend to be more secure
+    - Prevents brute force attacks
+- Symmetric encryption
+    - 128 bit or larger symmetric keys are common
+    - Numbers get larger and larger as time goes on
+- Asymmetric encryption
+    - Complex calculations of prime numbers
+    - Larger than symmetric
+    - Common to see key lengths of 3072 bits or larger
+
+**<u>Key Stretching</u>**
+- Make weak key stronger by adding more processes
+    - Keep hashing over and over
+
+
+#### Sumamry / Things to Know
+Encrypting data is huge when it comes to protecting data, it is one of the primary lines of defense to ensure that not data is being leaked to people that should not be able to view or read the data.
+
+- Know different ways encryption needs to be used
+- In waht different cases may we use different types of encryption
+- Pros and cons of using different types of encryption
+
+
+
+### 1.4 - Key Exchange
+
+**<u>Logistical Challenge</u>**
+- how to share an encryption key across insecure mediums without physically transferring the key?
+- Out of band key exchange
+    - Telephone, counter, in-person etc.
+- In hand key exchange
+    - Use asymmetric encryption
+
+**<u>Real time encryption/decryption</u>**
+- Share symmetric session key ising asymmtric encryption
+    - Client encrypts a random (symmetric) key with a server's public key
+    - Server decrypts the shared key and uses it to encrypt data "Session key"
+    - Needs to be changed often
+
+#### Summary / Things to Know
+Exchanging keys creates a big logistical challenge becuase if the keys are leaked then there is a huge breach in security, so we need to be very careful when considering how it will be done.
+
+- What is out of hand and in hand key exchange, what are some examples.
+- What is real time encryption / decryption, what are session keys?
+
+
+
+### 1.4 - Encryption Technologies
+
+**<u>Trusted Platform Module (TPM)</u>**
+- Specification for cryptographic functions
+    - Cryptographic hardware on a device
+- Cryptographic porcessor
+- Persistent Memory - Unique keys burned in during manufacturing
+- Versatile Memory - storage keys, hardware configuration information
+- Password Protected, no dictionary attacks
+
+**<u>Hardware Security Module (HSM)</u>**
+- Used in large devices
+    - Clusters, redundant power
+    - Securely store thousands of cryptographic keys
+- High-end cryptographic hardware
+- Key backups
+- Cryptographic connectors
+
+**<u>Key Management System</u>**
+- Services are everywhere
+    - On-prem or cloud based options exist
+    - Many different keys for many different purposes
+- Manage keys from centralized manager
+    - Often 3rd-party, separate keys from data
+
+**<u>Security Enclave</u>**
+- Protectd area for all our secrets
+- Implemented as hardware processor
+- Provides extensive security features
+    - Boot ROM, Root keys, Monitors system boot
+
+#### Summary / Things to Know
+There is a lot of enryption technologies out there, the biggest thing to note is that they are used a little different from other storage or data management technologies because they need to be more secure than generic technologies because of the use of keys.
+
+- What is HSM and TPM, what is the difference, how are they used in practice?
+- Why do we need a Key Management System or a security enclave?
+
+
+### 1.4 - Obfuscation
+**Obfuscation** --> Process of making something unclear, but not impossible to understand
+Might be hiding info in plain sight, can understand if you know how to read it.
+
+**<u>Steganography</u>**
+- Security Through Obscurity
+    - But its not really security
+**Techniques:**
+- Network based: Embed messages in TCP packets
+- Use an image: Embed message in image itself
+- Audio and Video options as well
+
+**<u>Tokenization</u>**
+- Data obfuscation
+    - hide some of original data
+- Protects PII
+- Just hidden from view
+
+#### Summary / Things to Know
+Obfuscation is the process of making something unclear and the only way to understand it is if you know how to read the unclear data.
+
+- What is tokenization, why is it used over hashing in certain cases
+- How does tokenization work? (can see professor messers video on this for the credit card tokenization example)
+
+
+### 1.4 - Hashing and Digital Signatures
+**<u>Hashes</u>**
+- Represent data as a short string of text
+    - Message digest or a fingerprint
+- One way trip
+    - Impossible to recover original message from a hash (No decryption)
+    - Used to store passwords / configurations
+- Verify downloaded document is same as original
+    - Integrity
+- Can be a digital signature
+    - Authentication, Non-repudiation, integrity
+
+**<u>Hash Examples</u>**
+- SHA256 Hash
+    - 256 bit / 64 hexadecimal characters
+- Can create two very different hashes for one small character change
+
+**<u>Practical Hashing</u>**
+- Verify a downloaded file
+    - hashes may be provided on a downloaded site
+    > Adding Salt : Random data added to apassword when hashing. Every user gets their own random salt.
+- Password storage
+    - Store salted hash
+    - Compare hashes at auth process
+
+**<u>Collision</u>**
+- Hash functions
+    - Take an input of any size
+    - Create a fixed size string
+    - Message digest, checksum
+- Hash should be unique
+    - Different inputs should never create same hash, if so, then we call that a collision
+- MD5 algorithm saw collision problems so we dont use MD5
+    - __Just an example of a case where this has happened__
+
+**<u>Digital Signatures<u>**
+- Prove the message was not changes
+    - Integrity
+- Prove source
+    - Authentication
+- Make sure signature isn't fake
+    - Non-repudiation
+- Sign with private key
+    - Message doesn't need to be encrypted
+- verify with the public key
+    - Any change in message will invalidate the signatures
+
+#### Summary / Things to Know
+Hashing is all about turning data into an encrypted form, but unlike encryption using asymmetric or symmetric keys, the goal is to make this unrecoverable. However, we cna use the representation for a number of things like authentication factors and ensuring integrity and non-repudiation in many cases.
+
+- What is hashing and wy is it used
+- how do we use hashing with storing passwords, how do we use salt in this case
+- what are collisions and why must they be avoided? What are some real world examaples where collisions will cause lots of problems for people.
+
+
+
+### 1.4 - Blockchain Technology
+**Blockchain Technology**: A distributed ledger (everyone has a copy and everyone maintains it) that is used for a number of applications.
+Applications:
+- Payments
+- Digital identification
+- Supply chain monitoring
+- Digital voting
+
+
+### 1.4 - Certificates
+**<u>Digital Certificates</u>**
+- Public key certificate
+    - binds a public key with a digital certificate
+    - And other details about the key holder
+- Digital signature adds trust
+    - PKI uses CAs for additional trust
+    - Web of trust adds other users for additional trust
+- Certificate creation can be built into an OS
+
+**<u>Root Of Trust</u>**
+- Everything associated with IT security requires trust
+    - Foundational characteristic
+- Refer to root of trust to build trust of something unknown
+    - Inherently trusted component
+    - Hardware, software, firmware, or other components
+    - Hardware security module (HSM), Secure enclave, Certificate Authority, etc..
+
+**<u>Certificate Authorities</u>**
+- Connect to unkown website
+    - Should we trust it?
+- need a good way to trst an known entity
+    - CA signed certificates can establish that trust ( valid certificate and website/entity)
+
+**<u>3rd Party Trustued CA</u>**
+- Built into browsers
+- You can purchase a web certificate
+    - CA is responsible for vetting the request
+
+**<u>Certificate Signing Request (CSR)</u>**
+- Create a key pair, send public key to be CA signed
+- CA validates the request
+    - COnfirms DNS, emails, and website ownership
+- CA digitally signs cert and returns it to applicant
+
+**<u>Private CAs</u>**
+- This is where you are your own CA
+    - Built in-house
+    Devices must trust the internal CA
+- Needed for medium to large organizations
+- Should be implemented as overall computing stratey
+
+**<u>Self-Signed Certs</u>**
+- Internal
+- Build your own CA
+- Install CA cert/trustued chain on all devices
+
+**<u>Wildcard Certs</u>**
+- Subject Alternative Names (SAN)
+    - Extension of an X.509 certificate
+    - Lists additional identification information
+    - Allows certificate to support many different domains
+- Wildcard domain
+    - Certificate are based on name server
+    - Wildcard domain will apply to all server names in a domain
+
+**<u>Key Revocation</u>**
+- Certificate Revocation List (CRL)
+    - Monitored by CA
+    - Can contain many revocations in large file
+
+**<u>OCSP Stapling</u>**
+- Online Certificate Status Protocol 
+    - Provides scalability to OCSP checks
+- CA is responsible for responding to all client OCSP requests, but does not scale will
+- have certificate holder verify their own status
+    - Status information is stored on certificate holder's server
+- OCSP status is "staples" into SSL/TLS handshake
+    - DIgitally signed by CA
+
+**<u>Revocation Details</u>**
+- Browser can check cert revocation
+- not all browsers support
+
+
+#### Summary / Things to Know
+Digital certificates can come in many form, but the basic idea behind using them is establishing digital trust, we are almost never just communicating with another person over the internet, we are almost always connecting and communicating with a number of systems that have nobody monitoring them so we use digital certificate to establish trust.
+
+- How are certifiactes handled on the web
+- What is the certificate lifecycle process
+- what is the role of the CA
+
+
+
+
+
+
+
+
+
 
 
