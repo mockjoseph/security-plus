@@ -477,4 +477,492 @@ Apple iOS = Jailbreaking
 - Zero-day attacks
     - Attack without a patch or method of mitigations
 
-    
+
+### 2.4 - An Overview of Malware
+**<u>Malware</u>**
+- Malicious software
+- Gather information
+- Show advertising
+
+**<u>Malware Types</u>**
+- Viruses
+- Ransomware
+- Worms
+- Trojan horse Horse
+- Key logger
+
+**<u>How do you get Malware?</u>**
+- All work togethe
+    - Worm takes advantage of vulnerability
+    - Installs malware that includes remote acess backdoor
+    - Addidtional malware installed later 
+- Computer must runa. program
+
+**<u>Data is Valuable</u>**
+- Personal data
+    - Family pictures and videos
+    - Important documents
+- Organizational data
+    - Planning docs
+    - Employee personally
+
+**<u>Ransomware</u>**
+- All data is encrypted until money is provided
+- Malware encrypts data
+    - OS remains available
+- Pay attackers to obtain decryption key
+
+**<u>Protocoling Ransomware</u>**
+- Always have a backup
+    - Offline backup
+- Keep OS up to date
+- Keep apps up to date
+- Anti-virus
+
+### 2.4 - Viruses and Worms
+**Virus** --> Malware that can reproduce itself 
+- Needs to execute a program
+- Reproduces through file systems or network
+- may or may not cause problems
+
+**<u>Virus Types</u>**
+- Program viruses
+    - Part of an app
+- Boot sector viruses
+- Macro viruses
+
+**<u>Fileless Virus</u>**
+- Stealth attack
+    - Avoids virs detection
+- Operate in memory
+
+
+**<u>Worms</u>**
+- Malware that self replicates
+- Doesn't need you to do anything
+- Uses network as a transmission medium
+- FW, IDS, IPS can mitigate worms
+
+#### Summary / Things to Know
+Worms and viruses can be highly detrimental to the overall security of a system and should be avoided at all costs.
+
+- Where do these things come from
+- What is the difference between a virus and a worm
+- how may we identify if a virus or a worm is present
+
+
+### 2.4 - Spyware and Bloatware
+**Spyware** --> malware that spies on you
+- Advertising, identity theft, affiliate fraud
+- Can trick you into installing
+- Browser monitoring
+- Key loggers
+    - Capture every keystroke
+
+**Bloatware** --> Uses valuable storage space and adds to overall resource usage
+- new computer or phone
+- OS or other important apps
+
+**<u>Protecting against Spyware</u>**
+- Maintain anti-virus / anti-malware
+    - Always have latest signatures
+- Always know what you are installing
+    - Watch options during installation
+- Wheres the backup??
+    - Might need it someday
+- Run scans
+    - Malware bytes
+
+**<u>Removing Bloatware</u>**
+- Identify and remove
+- use built in uninstaller
+- 3rd party uninstallers and cleaners as well
+
+### 2.4 - Other Malware Types
+**<u>Keyloggers</u>**
+- Keystrokes can contain valuable information
+    - Web-site logins, passwords, email messages
+- Save all input
+    - Send it to the bad guys
+- Circumvents encryption protections
+- Other data logging
+
+**<u>Logic Bomb</u>**
+- Wait for pre-defined event
+- Time bomb
+- user event
+- Difficult to identify
+
+**<u>Preventing logic bomb</u>**
+- Difficult to recognize
+- Processes and procedures
+- Electronic monitoring
+- Constant auditing
+
+**<u>Rootkits</u>**
+- Originally a unix technique
+- Modifies core system files
+- can be invisible to the OS
+
+**<u>Finding and Removing Rootkits</u>**
+- Look for unusual
+- use a remover specific to rootkit
+- Secure boot with UEFI
+
+
+### 2.4 - Physical Attacks
+- Old school security
+    - No keyboard, no mouse, no command line
+- Many diff ways to curcumvent digital security
+
+**<u>Brute-Force</u>**
+- Physical version
+
+**<u>RFID Cloners</u>**
+- Duplication is easy accessible and quick
+- This is why we use MFA
+
+**<u>Envirnment Attack</u>**
+- Attack everything supporting tech
+- Power monitoring
+- HVAC at data centers
+- Fire suppresion systems
+
+
+### 2.4 - Denial of Service
+- Force a system to fail
+- Take advantage of design failure or vulnerability
+- Overload the service
+- Cause system to be unavailable
+
+**<u>Friendly DoS</u>**
+- Unintention DoSing
+- Network DoS
+- Layer 2 loop with STP
+- Bandwidth DoS
+
+**<u>Distributed Denial of Service</u>**
+- Launch an army of computers to bring down a service
+- Asymmetric threat
+- Reflection and amplification
+- Turn small attack into a big one
+- increasingly common DDoS technique
+- usses protocols with little if any authentication or checks
+    - NTP, DNS, ICMP
+
+### 2.4 - DNS Attacks
+**<u>DNS Poisoning</u>**
+- Modify the DNS server
+    - Requires crafty hacking
+- Modify the client host file
+    - Host file takes precedent over DNS queries
+- Send fake response to a valid DNS request
+
+**<u>Domain Hijacking</u>**
+- Get access to domain refistration and you have control where traffic flows
+- Don't need to touch actual servers
+- Determines DNS names and DNS IP addresses
+- Many ways to get access into the account
+
+**<u>URL hijacking</u>**
+- Make money from your mistakes
+- Sell badly specified domain and owner
+- Redirect to a competitor
+
+**<u>Types of URL Hijacking</u>**
+- Typosquatting / brandjacking
+    - take advantage of poor spelling
+    - Outright misspelling
+    - Different top-level domain
+
+### 2.4 - Wireless Attacks
+Wireless attacks can take many forms, a lot of them come up as a **wireless deauthentication attack** or a **wireless denial of service attack**.
+
+**<u>802.11 Management Frames</u>**
+- 802.11 wireless includes a number of management features
+    - Frames that make everything work
+- Important for the operation of 802.11 wireless
+    - Find access points, manage QoS associate / dissasociate with access point etc.
+- Original wireless standards did not add protection for management frames
+    - Sent in the clear, no authentication or validation
+
+**<u>Protecting against Deauthentication<u>**
+- IEEE already addressed
+- Important management frames are encrypted
+- not everything is ecncrypted
+
+**<u>Radio Frequency (RF) jamming</u>**
+- DoS
+- transmit interfering wireless signals
+    - Decrease signal to noise ratio at receiving device
+    - receiving device cant hear good signal
+- Somtimes unintentional
+    - Interference not jamming
+- jamming is intentional
+
+**<u>Wireless Jamming</u>**
+- Constant, random bit / constant, legitamete frames
+- Data sent at random times
+- Reactive jamming
+- needs to be somewhere close
+- time to go fox hunting
+
+#### Summary / Things to Know
+Wireless attacks are varied but normally show up as deauthentication attacks or DoS attacks
+
+- What are management frames
+- What was the old standard and how was it exploited
+- What is the difference between interference and jamming, why may it be bad for an organization
+
+
+### 2.4 - On-path Attacks
+- How can an attack watch without you knowing?
+    - Formerly known as man in the middle attakcks
+- Redirects traffic
+    - passes it to destination
+    - never know traffic is re-directed
+- ARP poisoning
+    - On-path attack on local IP subnet (good example in professor Messer's video on this)
+
+**<u>On-path Browser Attack</u>**
+- what if middle man was on same computer as victim
+    - malware / trojan horse does all the proxy work
+    - Formerly know as man-in-browser
+- Huge advantages for attackers
+    - Relatively easy to proxy encrypted traffic
+    - Everything looks normal to victim
+
+
+### 2.4 - Replay Attacks
+- Useful information is transmitted over the network
+    - Crafty hacker will take advantage of this
+- Need access to raw network data
+    - network tap, ARP poisoning
+    - malware on victim computer
+- Replay data to appear as someone else
+- NOT an on-path attack
+    - Actual replay does not require original workstation
+    - Sometimes attackers will run an on-path then a replay
+- Avoid passing hashes by adding salt
+
+**<u>Browser Cookies and Session IPs</u>**
+- Encrypt end-to-end
+- Encrypt end-to-end somewhere (VPN concentrator)
+
+**<u>Header Manipulation</u>**
+- Information gathering
+    - Wireshark, kizmet
+- Explots
+    - Cross-site Scrpting
+- Modify headers
+    - tamper, scapy etc.
+- Modify cookies
+    - Cookies manager +
+
+### 2.4 - Malicious Code
+**<u> Exploiting a vulnerability</u>**
+- Attacker scan use many techniques
+    - Social engineering, default credentials, misconfiguration etc.
+- Do not require technical skills
+    - "The door is already unlocked
+- Still ways to get into well-secured system
+    - Exploit of malicious code
+    - Knock piins out of door hinge
+
+**<u>Malicious Code</u>**
+- Attackers use any opportunity
+    - Types of malicious code are varied
+- Many different forms
+- Protection from many different sources
+    - Anti-malware
+    - Firewall
+    - Continuous updates and patches
+    - Secure computing habits
+
+**<u>Examples</u>**
+- WannaCry ransomware
+    - Arbitrary code execution
+    - Windows vulnerability
+- British airways cross-site scripting
+- Estonian Central Health Database
+
+### 2.4 - Application Attacks
+**<u>Injection Attacks</u>**
+- Code injection
+    - Adding own information into data stream
+- Enabled because of bad programming
+    - Application should properly handle input and output
+- SO many different injectable data types
+
+**<u>Buffer Overflows</u>**
+- Overwriting a buffer of memory
+    - Spills into other memory areas
+- Devs need to perform bounds checking
+
+**<u>Priviledge Escalation</u>**
+- Gain higher level access to a system
+    - Exploit vulnerability
+    - Bug or design flaw
+- Higher level access means more capability
+- High priority vulnerability patches
+- Horizontal priviledge escalation
+- Use A can access User B resources
+
+**<u>Replay Attacks</u>**
+- Useful information is transmitted over network
+- Need access to raw network data
+- Replay data to server
+
+**<u>Cross-site Requests</u>**
+- Cross site requests are common and legitamete
+- Visit a website
+    - Browser loads text
+    - Loads video from YouTube
+    - Loads pictures from instagram
+
+**<u>Mitigations</u>**
+- Patch quickly
+    - Fix vulnerability
+- Updated ati-cirus / anti-malware software
+- Data execution prevention
+
+**<u>Directory Treaversal</u>**
+- Read files from web-server that are outside of website file directory
+- Web-server software vulnerability
+- Web-app code vulnerability
+
+**<u>client and Server</u>**
+- Webpages consist of client side code and server side code
+- Many moving parts
+
+**<u>Cross Site Request Forgery</u>**
+- One-click session riding
+    - XSRF, CSRF 
+- Takes advantage of the trust that a web-app has for the user
+    - Web-site trusts browser
+    - Requests are made without consent or knowledge
+    - Attacker posts facebook status on account ( See the example in Professor Messer video )
+
+
+### 2.4 - Cryptographic Attacks
+- Data was encrypted and sent out
+    - Is info really secure
+    - How do you know?
+- Attacker doesn't have combination
+    - So they break the safe...
+- Find ways to undo the security
+    - Problem is often the implementation
+
+**<u>Birthday Attack</u>**
+- In classroom of 23 students what is chance of 2 students sharing the same birth month
+    - ~50%
+- In digital world, hash collision is same hash value for two different plain texts
+- Protect yourself with large hash output size
+
+**<u>Collisions</u>**
+- Hash digests are supposed to be unique
+
+**<u>Downgrade Attack</u>**
+- Instead of using perfectly good encryption use something bad
+    - Force systems to downgrade security
+- SSL-stripping
+    - Combines on-path with downgrade attack
+
+
+### 2.4 - Password Attacks
+**<u>Plaintext / Unencrypted Passwords</u>**
+- Some applications store passwords "in the clear"
+- No encryption, very rare
+- DO NOT STORE PASSWORDS AS PLAINTEXT
+
+**<u>Hashing a Password</u>**
+- Hashing represents data a fixed length string of text
+- Message digest / fingerprint
+- Will not have collision hopefully
+- Cannot be reverse engineered
+
+**<u>Spraying Attack</u>**
+- Attack an account with most used passwords
+- If it doesn't work, move to the next account
+
+**<u>Brute Force</u>**
+- Try all possible combinations until hash is matched
+- Might take some time
+
+### 2.4 - Indicators of Compromise
+**IoC** = An event that indicates an intrusion
+- Confidence is high
+- Calling from inside the house
+Indicators:
+- Unusual amount of network traffic
+- Change to file hash values
+- Irregular international traffic
+- Changes to DNS data
+- Uncommon login patterns
+- Spikes of read requests to certain files
+    - And many more...
+
+**<u>Published / Documented</u>**
+- Company data published online
+- Entire attack goes unnoticed
+    - Raw data released without context
+
+**<u>Account Lockout</u>**
+- Credentials are not working
+    - It wasnt you though
+- Exceeded login attempts
+- Account was administratively disabled
+- may be part of a larger plan
+- Attacker locks account 
+- Calls support line to reset password
+
+**<u>Concurrent Session Usage</u>**
+- Multiple account logins from multiple locations
+- Can be difficult to track down
+
+**<u>Blocked Content</u>**
+- Attacker wants to stay as long as possible
+- System unlocked, keep it open
+- Security patch available? Keep away
+- Blocked content
+    - Auto-update connections
+    - Links to security patches
+    - Third party anti-malware sites
+    - Removal tools
+
+**<u>Resource Consumption</u>**
+- Every attackers action has equal and opposite reaction
+    - Watch carefully for significant changes
+- File transfers use bandwidth
+    - ex: Unusual spike at 3AM
+- Firewall logs show outgoing transfer
+    - Ip addresses, timeframes
+- Often first real notification of an issue
+    - Attacker may have been here for months
+
+**<u>Resource Inaccessibility</u>**
+- Server is down and not responding
+- network disruption
+- Server outage
+- Encrypted data
+    - Potential ransomware attack begins
+- brute force attacks
+    - Locks account access
+
+**<u>Out-of-cycle logging</u>**
+- Occurs at unexpected time
+- OS patch logs
+    - Occuring outside of normal patch day
+- Firewall log activity
+    - Timestamps of every traffic flow
+    - protocols and applications used
+
+**<u>Missing Logs</u>**
+- Attackers will try to cover tracks by deleting logs
+- logs should be secured and documented
+
+
+
+
+
+##
