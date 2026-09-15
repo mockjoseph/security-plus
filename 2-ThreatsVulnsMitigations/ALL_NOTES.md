@@ -963,6 +963,170 @@ Indicators:
 
 
 
+### 2.5 - Segmentation and Access Control
+**<u>Segment the Network</u>**
+- Physical, logical, virtual
+- Performance
+    - High bandwidth applications
+- Security
+    - Users should not talk directly to DB servers
+    - Only applications in the core are SQL and SSH
+- Compliance
+    - Mandated segmentation (PCI compliance)
+    - Makes change control much easier
+
+**<u>Access Control Lists</u>**
+- Allow or disallow traffic
+    - Groupings of categories
+    - Source IP, Dest IP, ports, time of day etc.
+- Restricted access to network devices
+    - Limit by IP as other identifier
+    - Prevent regular user / non-admin access
+- Be careful when configuring these
+    - accidentally lock yourself out
+- List the permissions
+    - Bob can read files, fred can access the network, james can access the network using TCP ports 80, 443, 8088
+- OS uses ACLs to provide access to files
+
+**<u>App Allow / Deny List</u>**
+- Any app can be dangerous
+- Security policy can control app execution
+- Allow list:
+    - Nothing runs unless approved
+    - Very restricive
+- Deny list:
+    - Nothing on a "bad list" can be executed
+    - Anti-virus, anti-malware
 
 
-##
+### 2.5 - Mitigation Techniques
+**Mitigation** --> Reducing impact of security event
+**<u>Patching</u>**
+- Incredibly important
+    - System stability, security flaws
+- Monthly updates (incremental and important)
+- Third party updates (app devs, device drivers)
+- Auto update
+    - Not always the best option
+- Emergency updates
+
+**<u>Encryption</u>**
+- Prevent access to app data files
+- File system encryption
+- File level encryption
+    - Windows EFS
+- App data encryption
+- Full-disk encryption
+- Encrypt everything on drive
+
+**<u>Monitoring</u>**
+- Aggregate information from devices
+    - Built in sensors, separate devices
+    - Integrated into servers, switches, firewalls, routers, etc
+- Sensors
+    - IPS, FW logs, auth logs, web-server logs, access logs, database transaction logs, email logs
+- Collectors
+    - Proprietary consoles, SIEM consoles, syslog servers
+    - many SIEMS include correlation engine to compare diverse sensor data
+
+**<u>Least Priviledge</u>**
+- Rights and perms set to bare minimum
+- All user accounts must be limited
+- Don't allow users to run with admin
+
+**<u>Config Enforcement</u>**
+- Perform posture assessment
+- Extensive check
+    - OS patch
+    - EDR
+    - Status
+    - Cert status
+
+**<u>Decommisioning</u>**
+- Should be formal policy
+- Mostly associated with storage devices
+- Recycle, destroy, delete
+
+
+### 2.5 - Hardening Techniques
+**<u>System hardening</u>**
+- Many and varied
+    - Windows, iOS, Android et al.
+- Updates
+    - OS updates, service packs, security patches
+- User accounts
+    - Minimum password lengths and complexity
+    - Account limitations
+- Network access and security
+    - Limit network access
+- Monitor and secure
+    - Anti-virus, malware
+
+**<u>Encryption</u>**
+- Prevent access to applicaiton data files
+    - File system encryption
+    - Windows Encrypting File System (EFS)
+- Full disk encryptoin
+    - Encrypt everything on the drive
+    - Windows bitlocker, macOS filebuilt, etc.
+- Encrypt all network communication
+    - Virtual Private Netwrok
+    - Application Encryption
+
+**<u>The Endpoint</u>**
+- The user's access
+    - Applications and data
+- Stop the attackers
+    - Inbound and outbound attacks
+- Many different platforms
+- Protection is multi-faceted
+    - Defense in depth
+
+**<u>Endpoint Detection and Response (EDR)</u>**
+- Different method of threat protection
+    - Scale to meet increasing number of threats
+- Detect a threat
+    - Signatures aren't the only detection tool
+    - Behavioral Analysis, machine learning, process monitoring
+    - Lightweight agent on the endpoint
+- Investigate the threat
+    - Root cause analysis
+- Respond to the threat
+    - Isolate the system, quarantine the threat, rollback to previous config
+    - API driven, no user or technician intervention required
+
+**<u>Host-Based Firewall</u>**
+- Software based firewall
+    - Personal firewall, runs on every endpoint
+- Allow or disallow incoming or outgoing application traffic
+    - COntrol by application process
+    - view all data
+- Identify and block unknown processes
+    - Stop malware before it can start
+- Control centrally
+
+**<u>Open ports and Services</u>**
+- Every open port is possible entry point
+- Control access with firewall
+    - NGFW ideal
+- Unused or unknown services
+- Apps with broad port-ranges
+
+**<u>Default Password Changes</u>**
+- Every network device has a management interface
+    - Virtual systems, other devices
+- Many applications also have management or maintenance interfaces
+    - These can contain sensitive data
+- Change default settings
+    - Passwords
+- Add additional security
+    - Require additional logon
+    - Add thrid party authentication
+
+**<u>Removal of Unnecessary Software</u>**
+- All software contains bugs
+    - Some bugs are security vulnerabilities
+- Every application seems to have a completely different patching process
+    - Can be challenging to manage ongoint updates
+- Remove all unused software
+    - Reduce risk, easy fix
