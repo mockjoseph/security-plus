@@ -589,4 +589,173 @@
     - Does not adaquately address security concerns
 
 
+### 3.3 - Data Types and Classification
+**<u>Data Types</u>**
+- Refulated
+    - Managed by third party
+    - Government laws and statues
+- Human readable
+    - Clear, obvious
+- Non-human readable
+    - Encoded data, barcodes
+- Some formats are hybrid
+- Trade Secrets
+    - An organizations secret formulas
+- Intellectual property
+    - Mostly public, copyright trademark
+- Legal information
+    - Court records/docs, judge / attorney info
+    - PII other sensitive details
+    - Stored in many different systems
+- Financial information
+
+**<u>Classifying Sensitive Data</u>**
+- Not all data has same level of categorization
+    - License tag numbers vs. health records
+- Different levels require different security and handling
+    - Additional permissions
+    - Different process to view
+    - Restricted network access
+
+**<u>Data Classifications</u>**
+- Proprietary
+    - Data that is property of an organization
+    - May also include trade secrets
+    - Data unique to an organization
+- PII - Personaly Identifiable Information
+    - Data that can be used to identify an individual
+    - Name, DOB, mother's maiden name, biometric information
+- PHI - Protected health information
+    - Health info, status
+**Putting in buckets**
+- Sensitive
+    - intellectual, PII, PHI
+- Confidential
+    - Very sensitive, must be approved to view
+- Public / Unclassified
+    - No retrictions on viewing data
+- private / Classified / Restricted
+    - restricted access, may require NDA
+- Critical
+    - Data should always be accessible
+
+### 3.3 - States of Data
+**<u>Data at Rest</u>**
+- Data is ona storage device
+- Encrypt the data
+    - Full-disk encryption
+    - Database
+    - File-based or folder
+- Apply permissions
+    - Access control lissts
+    - Only authorized users can access the data
+
+**<u>Data in Transit</u>**
+- Data transmitted over the network
+- Not much protection as it travels
+    - many switches, routers, devices
+- Network based protection
+    - Firewall, IPS
+- Provide transport encryption
+    - TLS, IPSec
+
+**<u>Data in Use</u>**
+- Data is actively processing in memory
+- Data is almost always decoupled
+- Attackers can pick decrypted information out of RAM
+    - Very attractive option
+
+**<u>Data Sovereignty</u>**
+- Data that resides ina. country is subject to laws of that country
+    - Legal monitoring, court orders, etc.
+- Laws may prohibit where data is stored
+    - GDPR (General Data Protection Regulation)
+    - Data collected on EU citizens must be stored in RU
+    - Complex mesh of technology and legalites
+- Where is data stored
+    - Compliance lwas may prohibit moving data out of the country
+
+**<u>Geolocation</u>**
+- Location details
+    - Tracks within localized area
+- Many ways to determine location
+    - 802.11, mobile providers, GPS
+- Can be used to manage data access
+    - Prevent access from other countries
+- Limit administrative tasks unless secure area is used
+    - Permit enhanced access when inside the building
+
+
+### 3.3 - Protecting Data
+**<u>Geographic Restrictions</u>**
+- Network location
+    - Identify based on IP subnet
+    - Can be difficult with mobile devices
+- Geolocation determines user's location
+    - GPS - mobile devices, very accurate
+    - 802.11 wireless, less accurate
+    - IP address, not very accurate
+- Geofencing
+    - Automatically allow or restrict access when a user is in a particular location
+
+**<u>Protecting the Data</u>**
+- Data is everywhere
+    - Storage, network, CPU
+- Encryption security policies
+- Data permissions
+
+**<u>Encryption</u>**
+- Encode information into unreadable data
+- Two-way street
+    - If have proper key
+- Confusion
+    - Encrypted data is drastically different than plain-text
+
+**<u>Hashing</u>**
+- Represent data as a string of text
+    - Message digest, fingerprint
+- One way trip
+    - Impossible to recover original data
+- Verify downloaded document is same as original
+- Passwords
+- Digital signature
+    - Authentication, non-repudiation, integrity
+- Will not have collision (hopefully)
+
+**<u>Obfuscation</u>**
+- Make something understandable into very difficult to understand
+- Take perfectly readable code and turn it into nonsense
+
+**<u>Masking</u>**
+- Type of obfusaction
+    - Hides some of original data
+- Protects PII
+- May only be hidden from view
+- Many techniques
+
+**<u>Tokenization</u>**
+- Replace sensitive data with non-sensitive placeholder
+- Common with credit card processing
+    - Temp token during payment
+- Is not encryption or hashing
+
+**<u>Masking</u>**
+- Type of obfuscation
+    - hides some of original data
+- Protects pII
+- May only be hidden from view
+- Many techniques
+
+**<u>Segmentation</u>**
+- Many organizations use single data source
+- One breach puts all data at risk
+- Separate the data
+- Sensitive data should have stronger security
+
+**<u>Permission Restrictions</u>**
+- Control access to account
+    - More than just username and password
+    - Determine what policies are best for organization
+- Authentication process
+- Permissions after login
 
