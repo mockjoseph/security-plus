@@ -759,3 +759,239 @@
 - Authentication process
 - Permissions after login
 
+
+### 3.4 - Resiliency
+**<u>High Availability</u>**
+- Redundancy doesnt always mean available
+    - May need to be powered on manually
+- HA (high availability)
+    - Always on, always available
+- May invlude many different components working together
+    - Active/Active can provide scalability advantages
+- Higher availability almost always means higher cost
+
+**<u>Server Clustering</u>**
+- COmbine two or more servers
+    - Appears and operates asa single large server
+    - Users only see one device
+- Easily increase capacity and availibility (add more servers to the cluster)
+- Usually configured in OS
+    - All devices in cluster commonly use the same OS
+
+**<u>Load Balancing</u>**
+- Load is distributed across multiple servers
+    - Servers often are unaware of eachother
+    - Can be different OS setups or different OS entirely
+- Load balancer adds or removes devices
+    - Add server to increase capacity
+    - Remove any servers not responding
+
+**<u>Site Resiliency</u>**
+- Recovery site is prepped
+    - Data is syncronized
+- Disaster is called
+    - Business processes failover to the alternate processing site
+- problem is addressed
+    - Can take hours, weeks, or longer
+- Revert back to primary locaiton
+
+**<u>Hot site</u>**
+- Exact replica of data cluster
+    - Duplicate everything
+- Stocked with ahrdware
+    - Constantly updated, buying two of everything
+- Applications and software are constantly updated
+- Flip switch, everything moves
+
+**<u>Cold-Site</u>**
+- Empty building
+- No data
+- No people
+
+**<u>Warm site</u>**
+- Big rooom with rack space
+- Somewhere in the middle
+
+**<u>Platform Diversity</u>**
+- Every OS has potential security issues
+- Specific to single OS
+- Use many different platforms
+- All with different uses
+
+**<u>Geographic Dispersion</u>**
+- Sited should be physically different than organization's primary location
+    - Many disruptions can affect large area
+        - hurricane, tornado, floods, etc.
+- Can be logistical challenge
+    - transporting equipment
+    - Employees
+
+**<u>Multi-Cloud options</u>**
+- Many cloud providers, use them
+- Plan for cloud outages
+- Both geographically dispersed and cloud-service dispersed
+
+**<u>Continuity of Operations Planning (COOP)</u>**
+- Not everything goes accordingly to plan, rely on computers
+- Needs to be manual alternative
+
+
+### 3.4 - Capacity Planning
+**Capacity Planning** --> Match supply to the demand
+- Too much demand
+    - App shutdowns and outages
+- Too much supply, paying too much
+- Requires a balanced approach
+
+**<u>People</u>**
+- Some services require human intervention
+- Too few employees
+    - Takes time adding new stuff
+    - Too many employees
+
+**<u>Technology</u>**
+- Pick technology that can scale
+- Web services
+    - distribute the load
+- Database services
+    - Cluster SBL servers
+- Cloud services
+    - Services on demand
+
+**<u>Infrastructure</u>**
+- The underlying framework
+    - Applicatoin servers, network services
+    - CPU, newtork, storage
+- Physical devices
+    - Purchase, configure, install
+- Cloud based
+    - Easier to deploy
+    - Useful for unexpected capacity
+
+
+### 3.2 - Recovery Testing
+**Recovery Testing** --> Test yourself before an actual event
+- Scheduled update sessions (annual, semi-annual, etc.)
+- Use well-defined rules of engagement
+- Very specific scenario
+- Evaluate response
+
+**<u>Table-Top Excercises</u>**
+- Performing full-scale disaster drill can be costly
+    - Many of logistics can be determined through analysis
+- Get key players together for a table-top excercise
+
+**<u>Fail-Over</u>**
+- Failure is often inevitable
+    - It's a when not if
+- May be able to keep running (automatic)
+- Create redundant infrastructure
+- I fail, go to operating unit
+
+**<u>Simulation</u>**
+- Test with simulated event
+- Going phishing
+    - Create phishing email attack (simulation)
+    - Test internal security
+    - Test users
+
+**<u>Parallel Processing</u>**
+- Split process through miltiple (parallel) CPUs
+    - Single computer with multiple CPU cores, or multiple physical CPUs
+    - Multiple computers
+- Improved performance
+- Split complex transactions across multiple processors
+- Improved recovery
+
+
+### 3.4 - Backups
+- Incredibly important
+    - Recover easily and quickly lost data
+    - lots of different variables
+    - storage, media, type
+    - Where? When?
+
+**<u>On-site vs. Offsite backups</u>**
+- On-site
+    - No internet link, data immediately available
+    - Generally less expensive than offsite
+- Off-site
+    - Transfer data over internet / WAN link
+    - Data is available after disaster
+    - Restoration can be prepared from anywhere
+- Organizations often use both types
+- More copies and more options
+
+**<u>Frequency</u>**
+- How often to backup
+    - Every week, day, hour
+- may be different between systems
+- Multiple backup sets
+- daily, weekly, monthly
+- Requires significant planning
+
+**<u>Encryption</u>**
+- history of data is on backup media
+    - Some media may be off-site
+- Makes it easy for an attacker
+- Protect backup data using encryption
+    - Recovery key required
+- Especially useful for cloud storage
+
+**<u>Snapshots</u>**
+- Popular on VMs
+    - Useful in cloud
+- Take a snapshot
+    - Instant backup of entire system
+- take a snapshot every day
+    - Contains changes between snapshots
+
+**<u>Recovery Testing</u>**
+- Not enough to perform backup
+    - Able to restore
+- Disaster recovery testing
+    - Simulate disaster and restore
+- Confirm restoration
+- Perform periodic audits
+
+**<u>Replication</u>**
+- An ongoing almost real-time backup
+    - Synchronization in multiple locations
+- data is available
+    - Always copy somewhere
+- Data is stored locally to all users
+- data is recoverable
+    - Disasters can happen at anytime
+
+**<u>Journaling</u>**
+- Power goes out while writing data to storaage
+    - stored data probably corrupted
+- Recover can be complicated
+- Before writing to storage, make a journal entry
+- After journal, write data to storage
+- After data write to storage, change journal
+
+
+### 3.4 - Power Resiliency
+- Power is foundational to technology
+    - Important to properly engineer and plan for outages
+- Usually don;t make our own power
+    - provided by a third party
+    - Way to mitigate issues
+
+**<u>Generators</u>**
+- Long-term power backup
+- Power an entire building
+    - Some outlets marked
+    - May take a few minutes
+
+**<u>UPS</u>**
+- Uninterrupted Power Supply
+    - Short term backup power
+    - Blackouts, brownouts, surges
+- UPS types
+    - Offline/standby
+    - Line - interactive
+    - On-line/double conversion
+- Features
+    - Auto shut-down, battery capacity outlets, phone like suppression
