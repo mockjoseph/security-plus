@@ -304,5 +304,364 @@
 - Authenticatory Device that provides access
 - Authentication server - Validates client credentials
 
+### 4.2 - Application Security
+**<u>Secure COding Concepts</u>**
+- Balance between time and quality
+    - Programming with security in minds is often secondary
+- Test and QA process
+- Vulnerabilities will eventually be found (and exploited)
+
+**<u>Input Validation</u>**
+- Unexpected inputs will not be interpreted by application
+- Document all input methods
+    - Forms, fields, types
+- Check and correct all input (normalization)
+- Fuzzers will finds what you missed
+
+**<u>Secure Cookies</u>**
+- Cookies
+    - Information stored on computer by browser
+- Used for tracking, personalization, session management
+- Not executable so not generally a risk unless someone gets access to them
+- Secure cookies have secure attribute set
+    - Browser will only send it over HTTPS
+- Sensitive information should not be saved ina. cookie
+
+**<u>Static Code Analyzers</u>**
+- SAST
+    - Help identify security flaws
+- Not everything can be identified through analysis
+- Still have to verify each finding
+
+**<u>Sandboxing</u>**
+- Applicaitons cannot access unrelated servers
+- Commonly used during development
+- Used in many different deployments
+    - VMs, mobile devices, browser frames
+    - Windows user account control
+
+**<u>Code Signing</u>**
+- Application is deployed
+- Security questions
+    - has app been modified
+    - App was indeed written by secure dev
+- App code can be digitally signe by developer
+
+**<u>Application Security Monitoring</u>**
+- Real-time information (app-usage, access demographics)
+- View blocked attacks (SQL injection, patched vulnerabilities)
+- Audit the logs (Find information gathering and hidden attacks)
+- Anamoly detection
+
+### 4.2 - Asset Management
+**<u>Acquisition / Procurement Process</u>**
+- The purchasing process
+    - Multi-step process for requesing and obtaining goods and services
+    - Start with request from the user
+    - usually includes budgeting information and formal approvals
+- Negotiate with suppliers
+    - Terms and conditions
+- Purchase, invoice, payments
+    - The money part
+
+**<u>Assignment / Accounting</u>**
+- Central asset tracking system
+    - Used y different parts of the organization
+- Ownership
+    - Associate a person with an asset
+    - Useful for tracking system
+- Classification
+    - Type of asset
+    - Hardware (capital expenditure)
+    - Software (operating expenditure)
+
+**<u>Monitoring / Asset tracking</u>**
+- Inventory every asset
+- Associate a support ticker wtih a device make and model
+- Enumeration
+    - List all parts of asset
+- Asset tag
+    - Barcode, RFID, tracking number
+
+**<u>Media Sanitization</u>**
+- System disposal or decommissiioning
+    - Completely remove data
+- Different use cases
+    - Clean Hard Drive or delte a single file
+- One way trip
+    - No recovery whatsoever
+- Reuse storage media
+    - Ensure nothing is left behind
+
+**<u>Physical Destruction</u>**
+- Shredder / Pulverizer
+- Drill / Hammer
+- Electromagnetic (degaussing)
+
+**<u>Certificate of Destruction</u>**
+- Destruction done by third party
+- Need confirmation of destruction
+
+**<u>Data Retention</u>**
+- Backup data
+    - How much and where
+    - Copies and versions
+- Regulatory compliance
+    - Certain amount of data backup may be required
+- Operational needs (accidental deletion, disaster recovery)
+- Differentiate by type and application
+    - Recover data needed when needed
+
+### 4.3 - Vulnerability Scanning
+- Usually minimally intrusive
+    - Unlike pen test
+- Port scan
+    - Poke around see whats open
+- Identify systems
+    - And security devices
+- Test from the outside and inside
+- Don't dismiss insider threats
+- Gather as mich information as possible
+
+**<u>Static code analyzers</u>**
+- SAST
+- Review source code for vulns
+- Verify each finding
+
+**<u>Dynamic Analysis</u>**
+- Send random input to an app
+- Looking for something out of the ordinary
+
+**<u>Fuzzing Engines and Frameworks</u>**
+- Many different fuzzing options
+    - Platform specific, language specific
+- Very time and processor resource beavy
+    - Many many different iterations to try
+    - Many fuzzing engines use high-probability tests
+
+**<u>Package Monitoring</u>**
+- Some applications are distributed in a package
+    - Escpecially open source
+    - Supply chain integrity
+- COnfirm package is legitamete
+    - Trusted source
+    - No added malware
+    - No embedded vulnerabilities
+
+
+### 4.3 - Threat Intelligence
+- Research the threat and threat actors
+- Data is everywhere
+    - hacker group profiles, tools used by attackers and much more
+- Make decisions based on the intelligence
+    - Invest in best prevention
+- Used by researchers, security operations teams and others
+
+**<u>Open Source Intelligence (OSINT)</u>**
+- Open source
+    - Public sources, groups etc.
+- Internet
+- Government data
+- Commercial data
+
+**<u>Information sharing Organization</u>**
+- Public threat intelligence
+    - Often classified information
+- Private threat intelligence
+    - Private companies have extensive resources
+- Need to share critical security details
+    - Real time high quality cyber-threat information sharing
+- Cyber threat alliance (CTA)
+    - Members updates specifically formatted threat intelligence
+    - CTA scores each submission are validates across other submissions
+    - Other members can extract the validated data
+
+**<u>Dark Web Intelligence</u>**
+- Dark web
+    - Overlay networks that use internet
+    - Requires specific software and configuration to access
+- hacking groups and services
+    - Activities, tools and techniques, credit card saled
+    - Accounts and passwords
+- monitor forums for activity
+    - Company names, executive names
+
+### 4.3 - Penetration Testing
+**Pen Test** --> simulate an attack
+- Similar to vuln scan process
+    - Actually try to exploit though
+- Often compliance mandate
+    - regular pen-testing by third party
+- National Institute of Standards and Technology (NIST) Technical Guide to Information Security and Assessment
+
+**<u>Rules of Engagement</u>**
+- Important document
+    - Defines purpose and scope
+    - Makes everyone aware of test parameters
+- Type of testing and schedule
+    - On-site physical breack internal and external test
+    - Normal working hours, after 6PM only etc.
+- Rules
+    - IP address ranges, emergency contacts, handling sensitive information, in-scope and out of scope devices and apps
+
+**<u>Exploiting Vulnerabilities</u>**
+- Try to break into system
+    - Can assure DoS on loss of data
+    - Buffer overflows can cause instability
+    - Gain priviledge escalation
+- May need to try different vulnerability types
+- Only be sure or vulnerable if you can bypass security
+
+**<u>Responsible Disclosure Program</u>**
+- Takes time to fix a vulnerability
+    - Software changes, testing, deployment etc.
+- Bug bounty programs
+    - Reward for discovering vulnerabilities
+    - Earn money for hacking a system
+    - Document vulnerability to earn cash
+- Controlled info release
+    - Report vulnerability
+    - Fix and make public
+
+**<u>Process</u>**
+- Initial exploitation
+    - Get into network
+- Lateral movement 
+    - Move system to system
+    - Inside network is relatively unprotected
+- persistence
+    - Need to be sure of getting back in
+- Pivot
+    - Gain access to not normally accessible ones
+    - use vulnerable system as proxy or relay
+
+
+### 4.3 - Analyzing Vulnerabilities
+**<u>Dealing with False Info</u>**
+- False positives
+- Different than low-security vulnerabilities
+    - Real but may not be highest priority
+- False negatives
+    - Much more dangerous
+- Update to latest signatures
+- Work with vulnerability management manufacturer
+
+**<u>Prioritizing Vulnerabilities</u>**
+- Not every vulnerability shares some priority
+    - Some may not be significant others critical
+- Difficult to determine
+- Refer to public disclosures and vulnerability databases
+
+**<u>CVSS</u>**
+- National vulnerability database http://nvd.nist.gov/
+- Synchronized with CVE list
+- Enhanced search functionality
+- Comon Vulnerability Scoring System (CVSS)
+    - Quantitative scoring of a vuln 0 - 10
+    - Scoring standards change over time
+- Industry collab
+
+**<u>CVE (Common Vulnerabilities and Exposures)</u>**
+- Vulns can be across referenced online
+- Many databases and places to search
+- Some cannot be definitevely identified
+
+**<u>Classification</u>**
+- Scanner looks for everything
+    - Signatures are key
+- App scans, web app scans
+- Network scans
+
+**<u>Environment Variables</u>**
+- Prioritization and patching frequency
+- Where located? Environment type?
+    - Everyone is different
+
+**<u>Exposre Factor</u>**
+- Loss of value or business activity if vulnerability is exploited
+    - Expressed as percentage
+- Limit acces? 50%
+- Disable? 100%
+
+**<u>Industry / Organizational Impact</u>**
+- Some exploits have significant consequences
+- Hospital / Healthcare impacts
+
+**<u>Risk Tolerance</u>**
+- Amount of risk acceptable to organization
+    - can't remove all risk
+- Timeing of security patches
+- Testing takes time
+    - Middle ground
+
+
+### 4.3 - Vulnerability Remediation
+**<u>Patching</u>**
+- Most common mitigation technique
+    - Know vulnerability exists
+    - patch file to install
+- Scheduled vulnerability / patch notices
+    - Monthly, quarterly
+- Unscheduled can
+    - Zero day
+- Ongoing process
+
+**<u>Insurance</u>**
+- Cybersecurity insurance coverage
+    - Lost revenue, data, recovery costs, money lost to phishing
+    - Privacy lawsuit costs
+- Doesn't cover everything
+    - Intentional acts funds transfers
+- Ransomware increased popularity of cybersecurity liability insurance
+    - Applies to every organization
+
+**<u>Segmentation</u>**
+- Limit the scope of an exploit
+    - Seperate devices into their own networks / VLANs
+- Breach would have limited scope
+- Can't patch?
+    - Disconnect from the world, air gaps may e required
+- use internal NGFW
+    - Block unwanted / unnecessary traffic between VLANs
+    - Identify malicious trafic on the inside
+
+**<u>Physical Segmentation</u>**
+- Seperate devices
+    - Multiple units, seperate infrastructure
+- Virtual Local Area Networks (VLANs)
+    - Seperated logically instead of physically
+    - Cannot communicate between VLANs without a layer 3 device/router
+
+**<u>Compensating Controls</u>**
+- Optimal security methods may not be available
+- Compensate in other ways
+    - Disable service, revoke access, limit access
+    - Modify internal security controls and software firewalls
+- Provide coverage until patch deployed
+
+**<u>Exceptions and Exemptions</u>**
+- Removing vulnerability is optimal
+    - Not everything can be patched though
+- Balancing act
+    - Provide the service, but also protect the data and systems
+- Not all vulnerabilities share the same severity
+    - may reqiire local login, physical access, other criteria
+- Exception may be an option
+
+**<u>Validation of Remediation</u>**
+- Vulnerability now patched
+    - Does the patch really stop the exploit?
+    - Did all systems receive patch?
+- rescanning
+- Audit (check systems, verify competition)
+- Verification
+
+**<u>Reporting</u>**
+- Ongoing checks are required
+- new vulnerabilities continuously discovered
+- Difficult / impossible to manage without automation
+- Continuous reporting
+    - Number of vulnerabilities, patched vs. unpatched
+    - new threat notifications
 
     
