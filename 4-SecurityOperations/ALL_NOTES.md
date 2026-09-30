@@ -664,4 +664,158 @@
     - Number of vulnerabilities, patched vs. unpatched
     - new threat notifications
 
-    
+
+### 4.4 - Security Monitoring
+- Attackers don't sleep
+- Monitor all entry points 247/365
+- React to security events
+- Status dashboards
+
+**<u>Log Aggregation</u>**
+- SIEM or SEM toos ( security information and event manager)
+    - Consolidate many logs to central database
+    - Servers, firewalls, VPN concentrators, SANs, cloud services
+- Centralized reporting
+    - All info in one place
+- Correlation between diverse systems
+    - View authentication and access
+    - track application access
+    - Measure and report data transfers
+
+**<u>Monitoring Computing Resources</u>**
+- Systems
+    - Authentications - logins from strange places
+    - Server monitoring - service activity, backups, software versions
+- Applications
+    - Availability, Data Transfers, Security notifications
+- Infrastructure
+    - Remote access systems, firewallsm and IPS reports
+
+**<u>Scanning</u>**
+- Constantly changing threat landscape
+    - New vulnerabilities are discovered daily
+    - many different business apps and services
+    - Systems and people are always moving
+- Actively check systems and devices
+    - OS system types and versions
+    - Device driver versions, installed appliactions
+    - potential anomalies
+- Gather the raw details
+
+**<u>Reporting</u>**
+- Analyze collected data
+    - Create "actionable" reports
+    - Status information
+    - Determine the best next steps
+    - Ad hoc information sumamries
+
+**<u>Archiving</u>**
+- Takes an average of 9 moths for company to identify and contain a breach
+    - IBM security report 2022
+- Access to data is critical
+    - Archive over extended period
+- May have a mandate
+
+**<u>Alerting</u>**
+- Real-time notifications of security events
+    - Increase in auth errors
+- Actionable data
+    - keep people informed
+- Notification methods
+    - SMS / Text, email, security console
+
+**<u>Alert Response and Remediation</u>**
+- Quarantine
+    - prevent potential security issue from spreading
+- Alert tuning
+    - Balancing out, prevent false positives and negaitves
+- An alert should be accurate
+    - Ongoing process, tuning gets better as time goes on
+
+
+## 4.4 - Security Tools
+**<u>Security Content Automation Protocol (SCAP)</u>**
+- Many different security tools on market
+- NGFWs, IPS, vuln scanners, etc.
+- All have their own way of evaluating threat
+- Managed by NIST
+- Allows tools to identify and act on same criteria
+- Vallidate security config, confirm patch installs, scan for secrity breaches
+
+**<u>Using SCAP</u>**
+- SCAP content can be shared between tools
+    - Focused on config compliance
+    - Detect applications with known vulnerabilities
+- Especially useful in large environments
+    - Many different OS and applications
+- Specification standard enable automation
+- Automation types
+    - Ongoing monitoring notifications, alerting, patching
+
+**<u>Benchmarks</u>**
+- Apply security best practices to everything
+    - Operating systems, cloud providers, mobile devices
+    - Popular: Center for Internet Security
+
+**<u>Agents / Agentless</u>**
+- Check to see if device is in compiance
+    - Install software onto device
+    - Run an on-demand gent check
+- Agents can usually provide more detail
+    - Monitoring for real-time notifications
+    - Must be maintained and updated
+- Agentless runs without formal install
+    - Persorms check, then disappears
+
+**<u>SIEM</u>**
+- Logs security events and information
+- Log collection of security alerts
+- Log aggregation and long-term storage
+    - Include advanced reporting
+- Data correlation
+    - link diversse data types
+
+**<u>Anti-virus and Anti-malware</u>**
+- Anti-virus is popular teerm
+    - Trojans, worms, macro viruses
+- Malware refers to broad malicious software
+- Terms are effectively same these days
+
+**<u>DLP</u>**
+- Wheres the sensitive data
+- Stop data before attackser gets it
+- Many sources, many destinations
+
+**<u>SNMP</u>**
+- Simple Network Management Protocol
+- Database of data (MIB): management Information base
+- Database contains OIDs: Object Identifiers
+- Poll devices over udp/161
+- Request statistics of device
+- Poll devices at fixed intervals
+
+**<u>SNMP traps</u>**
+- Most operations expect poll
+    - Devices respond to the request
+- SNMP traps can be configured on monitored device
+    - Communicates over udp / 162
+- Set threshold for alerts
+    - CRC error threshold, send trap
+    - Monitoring station can react immediately
+
+**<u>NetFlow</u>**
+- Gather traffic statistics from all fraffic flows
+    - Shared communication between devices
+- NetFlow --> standard colelction method
+    - Probe and collector setups
+    - usually searate reportin app
+
+**<u>Vulnerability Scanners</u>**
+- Minimally invasive
+- Port scan
+    - identify systems
+    - Test from outside and inside
+    - Gather as much info as possible
+
+
+
