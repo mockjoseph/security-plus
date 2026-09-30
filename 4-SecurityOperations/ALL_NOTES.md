@@ -818,4 +818,280 @@
     - Gather as much info as possible
 
 
+### 4.5 - Firewalls
+**<u>network based Firewalls</u>**
+- Filter traffic by port number or applications
+    - Traditional vs. NGFW
+- Encrypt traffic
+    - VPN between sites
+- Most FWs can be layer 3 devices
+    - Ingress/Egress of network
+
+**<u>NGFWs</u>**
+- OSI app layer (Layer 7)
+- Can be called different names
+- Advanced decodes
+    - Every packet needs analysis categorized, security decision determined
+
+**<u>Ports and Protocols</u>**
+- Make forwarding decisions based on protocol (TCP / UDP) and port number
+    - Traditional port-based firewalls
+    - Add to an NGFW for additional security policy options
+    - Based on destination protocol and port
+    - Web, SSH, RDP, DNS, NTP
+
+**<u>Firewall Rules</u>**
+- Logical path
+    - Usually top-to-bottom
+- Can be very general or very specific
+    - Specific rules are usually at the top
+- Implicit deny
+    - Most firewalls include a deny at the bottom
+        - Even if it didn't put one
+    - Everything with no explicit rule gets denied
+- Access control lists
+    - Allow or disallow traffic
+    - Groupings of categories
+        - Source IP, Destination IP, port number, time of day, application, etc.
+
+**<u>Web-Server FW Ruleset</u>**
+- RUle 1 allow all through port 22, TCP protocol allow al through port 80 and port 443
+- RDP microsoft 3389
+
+**<u>IPS Rules</u>**
+- Intrusion Prevention System
+    - Usually integrated into an NGFW
+- DIfferent ways to find malicious traffic
+    - Look at traffic as it passes by
+- Signature based
+    - Look for a perfect match
+- Anamoly based
+    - Build a baseline of whats "normal"
+    - Unusual traffic patterns are flagged
+- Determine what happens when unwanted traffic appears
+    - Block, allow, send alert, etc.
+- Thousands of rules
+- Rules can be customized by group
+- Can take time to find right balance
+
+**<u>Screened Subnet</u>**
+- An additional layer of security between you and internet
+    - Public access to public resources
+    - Private data remains inaccessible
+
+
+### 4.5 - Web Filtering
+**<u>Content Filtering</u>**
+- COntrol traffic based on data within the content
+- Corporate control of out and inbound data
+- Control of inappropriate content
+- Protection against evil
+
+**<u>URL Scanning</u>**
+- Allow or restrict based on uniform Resource Locator
+    - Also called Uniform Resource Identifier
+    - Allow list / block list
+- Managed by category
+    - Auction, hacking malware, etc.
+- Can have limited control
+- Often integrated into NGFW
+
+**<u>Agent Based</u>**
+- Install client software on the user's device
+    - Usually managed from a central console
+- users can be located anywhere
+    - Local agent makes filtering decisions
+    - Always on, always filtering
+- Updates mist be distributed to all agents
+    - Cloud-based updates
+    - Updates status shown at the console
+
+**<u>Proxies</u>**
+- Sits between users and external network
+- Recieves user requests and sends the request on their behalf (the proxy)
+- Useful for caching information, occurs control, URL filtering, content scanning
+- App may need to know how to use proxy (explicit)
+- Some proxies are invisible (transparent)
+
+**<u>Forward Proxy</u>**
+- Centralized "internal" proxy
+    - Commonly used to protect and control user access to the internet
+
+**<u>Block Rules</u>**
+- based on specific URL
+- Category of site content
+- Different dispositions
+
+**<u>DNS Filtering</u>**
+- Before connecting to site get the IP addresses
+- DNS is updated with real-time threat intelligence
+    - harmful sites are not resolved
+    - Works for any DNS lookup
+
+**<u>Reputation</u>**
+- Filter URLs based on percieved risk
+- Automated reputation
+    - Sites are scanned and assigned a reputation
+    - Add dispositions to URL filter
+
+
+### 4.5 - Operating Systems Security
+**<u>Active Directory</u>**
+- Database of everything on networks
+    - Computers, user accounts, file shares, printers
+    - Primarily windows based
+- manage authentication
+    - Users login using their AD credentials
+- Centralized access control
+    - Determine which users can access resources
+- Commonly used by the help desk
+    - Reset passwords, add and remove accounts
+
+**<u>Group Policy</u>**
+- Manage the computers or users with group policies
+    - Local and domain policies
+    - Group policy management editor
+- Cdntral console
+    - Login scripts
+    - Network configurations (QoS)
+    - Security parameters
+- Comprehensive control
+    - Hundreds of config options
+
+**<u>Security Enhanced Linux (SELinux)</u>**
+- Security patches for the Linux kernel
+    - Adds mandatory access control (MAC) to linux
+    - Linux traditionally uses Discretionary Access Control (DAC)
+- Limits application access
+    - Least priviledge
+    - Potential breach will have limited scope
+- Open source
+    - Already included as an option with many Lix distributions
+
+
+### 4.5 - Secure Protocols
+**<u>Unencrypted Network Data</u>**
+- Network traffic is important data
+- Some protocols aren't encrypted
+    - All traffic is sent in the clear
+    - Telnet, FTP, SMTP, IMAP
+- Verify with packet capture
+    - View everything sent over the network
+
+**<u>Protocol Selection</u>**
+- Use secure applicaiton protocol
+    - Built in encryption
+- Secure protocol may not be available
+    - May be a deal breaker
+
+**<u>Port Selection</u>**
+- Secure and insecure applicaiton connections may be available
+    - Common to run secure and insecure on different ports
+- HTTP and HTTPS
+    - In-the-clear and encrypted web browsing
+    - HTTP: Port 80
+    - HTTPS: Port 443
+- Port # does not guarantee security
+    - Confirm secure features are enabled
+
+**<u>Transport Method</u>**
+- Don't rely on the application
+    - Encrypt everything over the current network transport
+- 802.11 wireless
+    - Open access point: No transport level encryptoin
+    - WPA3: All user data is encrypted
+- Virtual Private Network
+    - Create an encrypted tunnel
+    - All trafic is encrypted and protected
+    - often requires third party services and software
+
+
+### 4.5 - Email Security
+**<u>Email Security Challenges</u>**
+- Protocols used to transfer emails include relaatively few security checks
+    - Very easy to spoof an email
+- Spoofing happens all the time
+- Email origiination looks right but may not be
+- Reputable sender will configure email validation
+    - Publicly available to sender's DNS server
+
+**<u>Mail Gateway</u>**
+- The gatekeeper
+    - Evaluates source of inbound email mesages
+    - Blocks it at gateway befoe it reaches user
+    - On-site or cloud based
+
+**<u>Sender Policy Framework</u>**
+- SPF protocol
+    - Sender configures a list of all servers authorized to send emails for a domain
+    - List of authorized mail servers re added to a DNS TXT record
+    - Recieving mail servers performm a check to see if incoming mail really did come from an authorized host
+
+**<u>Domain Keys Identified Mail (DKIM)</u>**
+- Mail server digitally signs al outgoing mail
+    - Public key is the DKIM TXT record
+- Signature is validated by the recieving mail servers
+    - Not usually seen by end user
+
+**<u>DMARC</u>**
+- Domain based Messaged Authentication Reporting and Conformance
+    - Extension of SPF and DKIM
+- Domain owner decides what recieving email servers whould do with emails not validating using SPF and DKIM
+    - Policy is written into DNS TXT record
+    - Accept all, send to spam, reject the mail
+- Compliance reports are sent to email administrator
+    - Domain owners can see how emails are recieved
+
+
+### 4.5 - Monitoring Data
+**<u>FIM (File Integrity Monitoriing)</u>**
+- Some files change all the time
+    - Some never
+- Monitor important OS and applicaiton files
+    - Identify when changes occur
+- Windows - SFC
+- Linux - Tripwire
+- many host based IPS options
+
+**<u>DLP</u>**
+- Wheres your data
+- Stop data before attcker gets it
+- Many sources, many destinations
+- ON computer
+    - Data in use
+    - Endpoint DLP
+- On network
+    - Data in motion
+- On server
+    - Data at rest
+
+**<u>USB Blocking</u>**
+- DLP on a workstation
+    - Allow or deny certain tasks
+- November 2008
+    - Worm virus
+    - bans removable flash media
+- All devices were updated
+
+**<u>Cloud based DLP</u>**
+- Located between users and internet
+- Watch every byte of network traffic
+- Block custom defined data strings
+    - Unique data for organization
+- manage access to URLs
+    - Prevent file transfers to cloud storage
+- Block viruses and malware
+
+**<u>DLP and Email</u>**
+- Email continues to be most critical risk vector
+- Check every inbound and outbound email
+- Inbound
+    - Keywords, imposters, quarantines
+- Outbound
+    - fake wire transfers...
+
+
+    
+
+
 
