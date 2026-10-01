@@ -1290,3 +1290,54 @@
     - Don't have to be there
 - Fast as computing systems its on
 
+**<u>Benefits</u>**
+- Save time
+- Enforce questions
+    - Missing important patches
+- Standard infrastructure configurations
+    - Use script to build a default router configuration
+- Add FW rules to new applicance
+- IP configs, security rules, standard config options
+
+**<u>Automation Benefits</u>**
+- Secure scaling
+    - Orchestrate cloud resources
+    - Quickly scale up and down
+- Employee retention
+    - Automate the boring stuff
+    - ease the workload
+    - Minimize mundane tasks
+    - Employee work is rewarding now repetitive
+- Reaction time
+    - Constant monitoring, address needed changes
+- Workforce multiplier
+
+**<u>Cases for Automatino</u>**
+- User and resource provisionsing
+    - ON-boarding, off-boarding
+- Guard Rails
+    - Set of automated validations
+    - Limit behaviors and responsses
+    - Constantly check to ensure proper implementation
+    - Reduce errors
+- Security groups
+    - Assign / remove access
+    - Contant audits without human intervention
+- Ticket creation
+- Escalations
+- Controlling services and access
+    - Automatically enable and disable services
+- Continuous integration and testing
+    - Constant development and code updates
+    - Securely test and deploy
+- Integration and APIs
+    - Interact with third party devices and services
+
+**<u>Scripting Considerations</u>**
+- Complexity
+- Cost
+- Single point of failure
+- Technical Debt
+- Patchingproblems may push issue down the road
+
+
