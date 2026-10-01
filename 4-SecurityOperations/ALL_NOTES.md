@@ -1497,3 +1497,105 @@
 
 
 
+### 4.9 - Log Data
+**<u>Security Log Files</u>**
+- Detailed security related information
+    - Blocked and unallow traffic flows
+    - Exploit attempts, Blocked URLs
+    - DNS schedule traffic
+- Critical security infromation
+    - Documentation of every traffic flow
+    - Summary of attack info
+    - Correlate with other logs
+
+**<u>Firewall Logs</u>**
+- Traffic flows through FW
+- Next Generation firewalls
+
+**<u>Endpoint Logs</u>**
+- Attackers often gain access to endpoints
+    - phone, laptop, tablet, dektop, server, etc.
+- Lot of data on endpoint
+    - Events, changes, account management
+- Everything rells up to SIEM
+- Use with correlation of security events
+
+**<u>Application Logs</u>**
+- Specific to app
+- Windows: Event Viewer /Application log
+- Linux / MacOS: /var/log
+- Parse log details on the SIEM
+
+**<u>IPS / IDS logs</u>**
+- Intrusion Prevention / Protection Systems
+    - Integrated into NGFW
+- Logs contain info about predefined vulnerabilities
+    - Knows OS vulnerabilites, generic secuirty events
+- Common data points
+    - Timestamp
+    - Type or class of attack
+    - Source and destination IP and port
+
+**<u>OS-Specific Security Logs</u>**
+- OS security events
+    - Monitoring apps
+    - Bruteforce, file changes
+    - Auth details
+- Dind problems before they happen
+- Brute force, disabled services
+- may require filtering
+- Don't forward everything
+
+**<u>Network Logs</u>**
+- Switches, routers, access points, VPN concentrators
+    - Other infrastructure details
+- network changes
+    - Routing updates, auth issues
+    - network security issues
+    
+**<u>Metadata</u>**
+- Data that describes other data sources
+- Email
+    - header details, sending sensors, destination address
+- Mobile
+    - Type of phone, GPS location
+- Web: OS, browser type, IP address
+- Files: Name, address, phone #, title
+
+**<u>Vulnerability Scans</u>**
+- Lack of secuirty controls
+    - no FW Anti-Virus, No anti-spyware
+- Misconfigurations
+    - Open shares, guest access
+- Real vulnerabilites
+    - New ones, occasionally older ones
+
+**<u>Automated Reports</u>**
+- Most SIEM include report generator
+    - Automate common security reports
+- Easy or complex to generate
+    - SIEM report generation?
+    - Third party report generators? (access DB)
+- Requires human interverntion
+    - Someone has to read reports
+- Can be involved to create
+    - huge data sorage and extensive processing time
+
+**<u>Dashboards</u>**
+- Real time status information
+    - Get summaries on a single screen
+- Add or remove information
+    - Most SIEMs and reporting systems allow for customization
+- Shows the most important data
+- not designed for long-term analysis
+
+**u<u>Packet Captures</u>**
+- Solve complex applicaiton issues
+    - Get into the details
+- Gathers packets on the network
+    - Or in air, sometimes built into device
+- View detailed traffic information
+    - Identify unknown traffic
+    - Verify packet filtering and security controls
+    - View plan language description of application data
+
