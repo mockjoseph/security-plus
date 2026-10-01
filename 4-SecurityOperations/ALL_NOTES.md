@@ -1091,7 +1091,202 @@
     - fake wire transfers...
 
 
-    
+### 4.5 - Endpoint Security
+**Endpoint** --> User's access
+- Applications and data
+- Stop the attackers
+    - Inbound, outbound attacks
+    - Protection is multi-faceted
+
+**<u>Edge vs. Access Control</u>**
+- Control at the edge
+    - Internet link
+    - Managed primarily through firewall rules
+    - FW rules rarely change
+- Access control
+    - Control from wherever you are
+    - Access can be absed on many rules
+    - Access can be easily revoked or changed
+
+**<u>Posture Assessment</u>**
+- Can't trust everyone's computer
+    - BYOD
+    - Malware infections
+    - Unauthorized applications
+- Before connecting to network perform health check
+    - Trusted? - Anti-virus with signatures
+    - Coorporate cpps?
+    - Mobile? Disk Encrypted?
+
+**<u>Health Checks / Posture Assessment</u>**
+- Persistent Agents
+    - Permanently installed on system
+    - Periodic updates may be required
+- Disolvable Agents
+    - No installation required
+    - Runs diring posture assessment
+    - Terminals when no longer required
+- Agentless NAC
+    - Integrated with AD
+    - Checks are made during login and logoff
+    - Can't be scheduled
+
+**<u>Failing The Assessment</u>**
+- What happens when posture assessment fails?
+    - Too dangerous to allow access
+    - Quarantine network, notify administrators
+    - Just enough network access to fix issue
+- Once resolved can try again
+    - may require additional fixes
+
+**<u>Endpoint Detection and Response</u>**
+- Different method of threat detection
+    - Scale to meet increasing number of threats
+- Detect a threat
+    - Signatures aren't the only detection tool
+    - Behavioral analysis, machine learning, process monitoring
+    - Lightweight agent on the endpoint
+- Investigate the threat
+    - Root cause analysis
+- Respond to the threat
+    - isolate the system, quarantine the threat rollback to previous config
+    - API driven, no user or technician required
+
+**<u>Extended Detection and Response (XDR)</u>**
+- Evolution of EDR
+    - Improve missed detections, false positives, long investigatio times
+    - Attacks involve more than just the endpoint
+- Add network based detection
+- Correlate endpoint, network, cloud data
+
+**<u>User Behavioral Analysis</u>**
+- XDR commonly uses this
+- Watches users, hosts, network traffic, data repositories
 
 
+### 4.6 - Identity and Acces Management
+- Applications are available everywhere
+- Data can be located everywhere
+- many different applicaiton users
+- Give right permissions to right people at right time
+- Identity lifecycle management
+- Access control
+- Authentication and authorization
+- identity governance
+
+**<u>Provisioning / De-provisioning user account</u>**
+- User account creation process
+- Provisioning and de-provisioning access for certain events
+
+
+### 4.6 - Access control
+- Authorization
+    - Process of ensuring only authorized rights are excercised
+    - Policy enforcement
+    - process fo determining rights
+    - Policy definition
+- Users recieve rights based on access control models
+    - different business needs or mission requirements
+
+**<u>Least Priviledge</u>**
+- Right and permissions are set to bare minimum
+- All user accounts must be limited
+- Don't allow users to run with administrative priviledges
+
+**<u>Discretionary Access Control</u>**
+- Used in most OS
+- Person who created data manages access
+- Very flexible
+- Very weak security
+
+**<u>Mandatory Access Control</u>**
+- OS limits operation on an object
+    - Based on security clearance levels
+- Every object gets a label
+    - Confidential, secret, top secret, etc.
+- Labeling of object uses predefined rules
+    - Admin decides who gets access to what level
+- Users cannot change settings
+
+**<u>Rule Based Access Control</u>**
+- Generic term for following rules
+- Access checked through system-enforced rules
+- Rule is associated with object
+    - Time based, software based etc.
+
+**<u>Role Based Access Control</u>**
+- have role in org
+    - Access based on that role
+- Admins provide access based on role of user
+- Can add users to a group which pre-defines set of roles
+
+**<u>Attribute based Access Control (ABAC)</u>**
+- users can have complex relationships to applications and data
+    - Access may be absed on many different criteria
+- ABAC can consider many parameters
+    - "next generation" authorisation model
+    - Aware of context
+- Combine and evaluate multiple paremeters
+    - resource information, IP addresses, time of day, etc.
+
+**<u>Time of Day Restrictions</u>**
+- Almost all devices include time of day option
+- Difficult to implement
+- Time of day restrictions
+
+
+### 4.6 - Multifactor Authentication
+- Prove who you are
+    - Use different methods
+    - Passwords, mobile app, GPS location
+- Factors
+    - Something you know, have, are, where
+- Know: Password/PIN
+- have: Smart Card / ID / USB security key / Hardware / Software Tokens / Phone
+- Are: Biometric -> Mathematical representation
+    - Difficult to change
+- Somewhere: GPS, where are you in the world, IP address, mobile device location
+
+
+### 4.6 - Password Security
+**<u>Password Complexity and Length</u>**
+- make password strong
+- Increase password entropy
+- Stronger passwords are at least 8 chars
+
+**<u>Password Age and Expiration</u>**
+- Age: How long since modified
+- Expiratoin: password works for certain amount of time
+
+**<u>Passwordless Authentication</u>**
+- Many breaches are due to poor password control
+- Authenticate without password
+- Still with some authentication method
+
+**<u>Password Managers</u>**
+- Important to use different passwords for each account
+- Store all passwrods in a single DB
+    - Encrypted and protected
+    - Can include MFA tokens
+- Built into many OS
+- Enterprise password managers
+
+**<u>Just-in-time Permissions</u>**
+- In many ords, IT team is assigned to admin / root elevated account rights
+- Grant admin access for a limited time
+    - no permanent administrator rights
+    - Breached user account never has elevated rights
+- Request access from central clearing house
+- password vaulting
+    - Primary credentials are stored in password vault
+    - Vault controls who gets access to the credentials
+- Accounts are temporary
+    - Just in time process creates time limited account
+    - Admin recieves ephemeral credentials
+
+
+### 4.7 - Scripting and Automation
+- Automate and orchestratte
+    - Don't have to be there
+- Fast as computing systems its on
 
