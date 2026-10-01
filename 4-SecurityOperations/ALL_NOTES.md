@@ -1341,3 +1341,159 @@
 - Patchingproblems may push issue down the road
 
 
+### 4.8 - Incident Response
+**<u>Security Incidents</u>**
+- User clicks attatchment and runs executable
+- DDoS
+- Confidential Information is stolen
+- User instals peer to peer software and allows external access to internal servers
+
+**<u>NIST 800-61</u>**
+- (NIST Special Publication 800-61 Revision 2 2023)
+- Computer security Incident Handling Guide
+- Incident Response lifecycle:
+1. Preparation
+2. Detection and analysis
+3. Containment, eradication, recovery
+4. Post Incident Activity
+
+**<u>Preparing For and Incident</u>**
+- Communication methods
+- Incident handling hardware and software
+- Incident analysis resources
+- Incident mitigation and software
+    - Images, clean OS
+- Policies needed for incident handling
+
+**<u>The Challenge of Detection</u>**
+- many different detection surces
+    - Different levels of detail, different levels of detection
+- large amount of "volume"
+- Incidents are almost always complex
+
+**<u>Analysis</u>**
+- An incident might occur in the future
+    - This is a heads up
+- Web server log - Exploi announcement
+- Direct threats
+- An attack is underway
+    - Or exploit is successful
+- Buffer overflow attempt IPS/IDS
+- Anti-virus software identifies malware
+- Detects from OS and notifies administrator
+- Host based monitor detects a configuration change
+    - Constantly monitors system files
+- Network traffic flows deviate from the norm
+
+**<u>Isolation and Containment</u>**
+- Generally a bad idea to let things run their course
+    - incident can spread quickly and at that point its your fault
+- Sandboxes
+    - Isolated OS
+    - Run malware and analyze results
+- Isolation can sometimes be problematic
+    - Monitor connectivity, cover tracks if connectivity is lost
+
+**<u>Lessons Learned</u>**
+- Learn and improve
+- Post incident meeting
+- Don't wait too long
+- Answer tough questions
+    - What happened and why
+
+**<u>Training For an Incident</u>**
+- Limited on-th-job training when a security event occurs
+- Train team prior to an incident can be an expensive endeavor
+
+**<u>Recovery After an Incident</u>**
+- Get things back to normal
+- Eradicate the bug
+    - Rename malware, disable breached user accounts, fix vulnerabilities
+- Recover the system
+
+
+### 4.8 - Incident Planning
+**<u>Excercising</u>**
+- Test yourselves before actual event
+- Use defined rules of engagement
+- Very specific scenario
+- Evaluate response
+
+**<u>Table Top Excercisse</u>**
+- Not an actual drill
+- GOing through scenarios logistically
+- Get key players together
+
+**<u>Simulation</u>**
+- Test with simulated attack
+- Phishing
+- Test internal security
+- Test users
+
+**<u>Root Cause Analysis</u>**
+- Determine ultimate cause of an incident
+- Create a set of conclusions regarding the incident
+- Don't get tunnel vision
+- Mistakes happen
+
+**<u>Threat Hunting</u>**
+- Constant game of cat and mouse
+- Strategies constantly changing
+- Intelligence data is reactive
+- Speed up reaction time
+
+
+### 4.8 - Digital Forensics
+- Collect and protect information relating to an intrusion
+    - many different data sources and protection mechanisms
+- RFC 3227 - Guidelines for evidence colection and archiving
+    - Good set of best practices
+- Standard digital forensic processes
+    - Acquisition Analysis, reporting
+- Must be detail oriented
+
+***<u>Legal Hold</u>**
+- Legal technique to preserve relevant info
+- Hod Notification
+    - Preserve data
+- Separate repo for electronically stored info
+- Ongoing preservation
+
+**<u>Chain of Custody</u>**
+- Control evidence: maintain integrity
+- Everyone who contacts evidence
+    - use hashes and sigs, avoid tampering
+- Label and catalog everything
+    - Digitally tag
+
+**<u>Acquisition</u>**
+- Obtain data
+    - Disc, RAM, firmware
+- Some data may not be a single system
+- For virtual, get snapshot
+- Look for left-behind digital items
+
+**<u>Reporting</u>**
+- Document findings and how data was acquired
+- Summary information (security event)
+- Detailed explanation of dat acquisition
+- Findings, analysis of data
+- Conclusion
+
+**<u>Preservation</u>**
+- handling evidence
+    - isolate and protect data
+    - Analyze data later without any alterations
+- Manage collection process
+    - Work with copies, manage data collection from mobile devices
+- Lice collection has become important skill
+    - Encrypted, difficult to collect after powering down
+- Follow best practices to ensure admissibility of data in court
+
+**<u>E-Discovery</u>**
+- Collect, prepare, review, interpret and produce electronic documents
+    - E-discovery gather data required to legal process
+    - Works together with digital forensics
+
+
+
