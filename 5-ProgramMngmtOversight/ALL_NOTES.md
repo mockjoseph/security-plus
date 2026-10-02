@@ -274,7 +274,7 @@
 
 
 
-## 5.2 - Risk Analysis
+### 5.2 - Risk Analysis
 **<u>Qualitative Risk Assessment</u>**
 - Identify significant risk factors
     - Ask opinions about the significance
@@ -692,4 +692,78 @@ __Good payroll example in video__
     - Service scans, version scans
 
 
+### 5.6 - Phishing Campaings
+- How many employees would click a link in a phishing email?
+- Companies will run phishing campaign to see
+- Automated process
+    - Centralized reporting for incorrect clicks
+    - users can recieve immediate feedback and security training
+    - Some orgs will schedule in-person training
+- Recognize phishing attempt
+    - Spelling, domain, unusualities
+- Respond to reported suscpicious messages
+    - Email filtering, never click links
+    - All orfs should have process for reporting phishing
 
+**<u>Anomalous Behavior Recognition</u>**
+- Risky behavior
+    - Modifying hosts file
+    - Replaying core OS file
+    - Uploading sensitive files
+- Unexpected behavior
+    - Logon from another country
+    - Increased data transfers
+- Unintentional behavior
+    - Typing wrong DN, misplacing USM, misconfigs
+
+**<u>Reporting and Monitoring</u>**
+- Track and analyze security awareness metrics
+- automated, phishing click rates
+- initial
+    - First occurence is opportunity for user training
+- Recurring
+    - Value of long-term monitoring
+    - Identify high frequency security issues
+
+**<u>Development</u>**
+- Create security awareness team
+    - Create roles for training, monitoring
+- Establish minimum awareness level
+    - Info delivery, depth of training based on job
+- Integrate compliance madates
+    - PCI, DSS, HIPAA, GDPR, etc.
+- Define metrics
+    - Assess performance of security awareness
+
+
+### 5.6 - User Training
+**<u>Security Awareness Training</u>**
+- Before providing access, train users
+    - Detailed security requirements
+- Specialized training
+    - Each user role has uniwue responsibilites
+- Also applies to third parties
+
+**<u>User GUidance and Training</u>**
+- Policy / handbooks
+    - Document all secuirty requirements
+    - Provide acces online in policy guidelines
+    - Reference policies in employee handbooks
+- Situational awareness
+    - USers should always be looging for threat
+- Insider threat
+    - Difficult to guard against
+    - Add approvals for critical processes
+- Password management
+    - Many standards to choos from
+- Removable media and cables
+    - Unknown drives can contain malware
+- Social Engineering
+    - Extensive ongoing training
+- Operational security
+    - View security from attackers perspective
+- hybrid / Remote work environments
+    - unusual security risks
+    - Family, friends access
+    - Enpoint security
+    - Security policies for VPN access\
