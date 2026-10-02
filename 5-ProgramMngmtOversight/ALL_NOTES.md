@@ -604,3 +604,92 @@ __Good payroll example in video__
     - Follow existing laws and regulations
 
 
+### 5.5 - Audits and Assessments
+- Not just for taxes
+- Cybersecurity Audit
+    - Examines IT infrastructure, software, devices
+    - Checks for effectiveness
+    - Internal or externally conducted
+- Attestation
+    - Provides an opinion of truth or accuracy of a company's security positioning
+    - Auditor will attest to company's cybersecurity posture
+
+**<u>Internal Audits</u>**
+- not just for third parties
+- Compliance
+- Audit committee
+    - oversees risk management activites
+    - All audits start and stop with committee
+- Self assessments
+    - have organization perform their own checks
+    - Compile Self assessments into ongoing reports
+
+**<u>External Audits</u>**
+- regulatory requirements
+    - Independent third party may be required to perform audit
+    - Audit tupe and frequency are often based on regulation
+- Examinations
+    - Audits often require hands on research
+    - Future improvement reccomendations
+
+
+
+### 5.5 - Penetration Tests
+**<u>Physical Penetration Testing</u>**
+- Operating system security can be circumvented by physical means
+    - modify boot process
+    - Boot from other media
+    - Modify or replace OS files
+- Physical security is key
+- Assess and test physical security
+    - Enter building?
+
+**<u>Pentesting Perspectives</u>**
+- Offensive
+    - Red-team
+- defensive
+    - blue-team
+- integrated
+    - Create ongoing process
+
+**<u>Working Knowledge</u>**
+- How much do you know about test
+- Known environment
+    - Full disclosure
+- partially known environment
+    - Focus on certain systems or apps
+- unknown environment
+    - Pentester knows nothing about systems under attack
+    - "Blind" test
+
+**<u>Reconnaissance</u>**
+- Need information before the attack
+    - Cant rush blindly into battle
+- Gathering digital footprint
+    - Learn everything you can
+- Understand security posture
+- Minimize attack area
+    - Focus on key systems
+- Create network map
+    - Identify routers, networks, remote sites
+
+**<u>Passive Reconnaissance</u>**
+- Learn as much as possible from open sources
+    - Lots of info out there
+    - Remarkable difficult to protect of identify
+- Social media
+- Corporate website
+- Online forums, reddit
+- Dumpster diving
+- business organizations
+
+**<u>Active Reconnaissance</u>**
+- Trying the doors
+    - Visible on network traffic and logs
+    - ping scans, port scans
+    - DNS queries
+    - OS scans, OS fingerprinting
+    - Service scans, version scans
+
+
+
