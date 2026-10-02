@@ -373,4 +373,129 @@
     - Total uptime / # of break downs
     - Statistically plan for possible outages
 
-    
+
+### 5.3 - Third Party Risk Assessment
+**<u>Third Party Risk</u>**
+- Every organization works with vendors
+    - payroll, customer relationship management, email marketing, travel, raw materials
+- Important company data is often shared
+    - may be required for cloud-based services
+- Perform risk assessment
+    - Categorize risk by vendor and manage the risk
+- Use contracts for clear understanding
+    - Force secure environment, everyone understands expectations
+
+**<u>Penetration Testing</u>**
+- Pentest: Simulate an attack
+- Similar to vulnerability scanning
+- OFten compliance mandate
+- Refular pen-testin by third party
+    - Specialized well versed experts
+
+**<u>Right to Audit Clauses</u>**
+- Common to work with business partners
+    - Data sharing and outsourcing
+- Third party providers
+    - Can hold all data
+    - Manage internet access
+    - Are they secure?
+- Right to audit should be in contract
+    - Legal agreement to have option to audit at any time
+
+**<u>Rules of Engagement</u>**
+- Important document
+    - Defines purpose and scope
+    - Makes everyone aware of test parameters
+- Type of testing and schedule
+- On-site physical breach, internal, external test
+    - Time of test
+- Rules
+    - IP address ranges, emergency contacts
+    - Sensitive info handling
+    - In/out of scope systems and devices
+
+**<u>Evidence of Internal Audits</u>**
+- Evaluate the effectiveness of security controls
+    - Have third party perform audit
+- May be required for compliance
+- Check security controls and processes
+    - between you and third party
+    - ALways opportunity for improvement
+- Perform at reasonable frequency
+
+**<u>Supply Chain Analysis</u>**
+- System involved when creating product
+- Supply chain analysis
+    - Get product or service from supplier to customer
+    - Evaluate coordination between groups
+    - Identify areas for imporvement
+    - Assess IT systems supporting operation
+    - Document business process changes
+
+**<u>Independent Assessments</u>**
+- Bring in specialist to provide reccomendations
+- They've seen it all
+
+**<u>Vendor Monitoring</u>**
+- Ongoing management of vendor relationship
+- Reviews should occur on a regular basis
+- Different vendors checked for different indidcators
+    - Quantitative? Qualitative analysis
+- Assign person to be in cahrge of vendor relationship
+- Questionnaires
+    - Important part of due dilligence
+    - Security related questions
+    - Recovery, storage etc
+    - Results update risk analysis
+
+**<u>Vendor Selection Process</u>**
+- Die dilligence
+    - Check comany out before business
+    - Financial status, pending / past legal issues
+- Conflict of interest
+    - Personal interest clouding judgement
+    - Business with largest competitor
+    - Bribing or relations
+
+
+### 5.3 - Agreement Types
+**<u>Common Agreements</u>**
+- Service Level Agreement (SLA)
+    - Minimum terms for services provided
+    - Uptime, response time agreement, etc.
+    - Commonly used between customers and service providers
+- Contract with an internet provider
+    - SLA is no more than 4 hours of unscheduled downtime
+    - Technician dispatched
+    - May require customer to keep spare equipment on site (all written in agreement)
+- Memorandum of Understanding (MOU)
+    - Both sides agree on contents
+    - Usually jsut states common goals
+    - Not a signed contract
+- memorandum of Agreement (MOA)
+    - Next step above MOU
+    - Both sides conditionally agree to objectives
+    - Not like a contract, may not contain legally enforcable promises
+- Master Service Agreement
+    - Legal contract and agreement of terms
+    - Broad framework to cover later transactions
+    - many detailed negotiations happen here
+    - Future projects based on this agreement
+- Work order (WO) / statement of work (SOW)
+    - Specific list of items to be completed
+    - used in conjunciton with MSA
+    - Details job scope, locaiton, deliverables schedule, acceptance criteria
+    - Job done properly? Consult SOW
+- Business partners Agreement (BPA)
+    - Owner stake, financial contract
+    - Decision making
+    - Prepare for contingencies
+
+**<u>Non-Disclosure Agreement</u>**
+- Confidentiality agreement between parties
+- Protects confidential information
+- Unilateral or bilateral / multilateral
+    - One way or mutual NDA
+- Formal contract requiring signatures
+
+
