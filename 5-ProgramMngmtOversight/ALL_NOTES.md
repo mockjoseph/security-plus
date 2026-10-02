@@ -499,3 +499,108 @@
 - Formal contract requiring signatures
 
 
+### 5.4 - Compliance
+**Compliance** --> Meeting standards of laws, policies, refulations
+- healthy catalog of rules
+    - Industry specific or situational
+- Penalties
+    - Fines, loss of employment, incarceration
+- Scope
+    - Domestic, international
+
+**<u>Compliance Reporting</u>**
+- Internal (CCO)
+    - Monitor and report organizational compliance efforts
+    - Provide details to customers and potential investors
+- External
+    - Documentation required by external or industry regulators
+    - Annual or ongoing reporting
+    - Missing / Invalid reporting could result in finer sanctions
+
+**<u>Regulatory Compliance</u>**
+- Sarlanes Oxley 
+- HIPAA
+- GLBA
+
+**<u>HIPPA non-compliance Fines and Sanctions</u>**
+- Fine up to 50,000 or year in prison (Class 6)
+- Then just goes up from there
+
+**<u>Reputational Damage</u>**
+- Getting hacked is not great look
+- October 2016 Uber breach
+    - Didn't announce intil Nov. 2017
+    - Uber paid 148 million in fines
+
+**<u>Other Consequences</u>**
+- Loss of license
+    - Significant economic sanciton
+- Contractural impacts
+    - Some business deals require minimum compliacnce level
+    - Without compliance, contract may be in breach
+
+**<u>Compliance Monitoring</u>**
+- Ensure compliacne in day-to-day operations
+- Due dilligence / care
+    - Duty to act honestly and in good faith
+    - Investigate and verify
+    - Due care refers to internal
+    - Due dilligence external
+- Attestation and acknowledgement
+    - SOmeone must sign off on formal compliance documentation
+- internal and external
+    - monitor complicance with internal tools
+    - provide access or informaiton to third parites
+    - Require ongoing monitoring of third party operations
+- Automation
+    - Must have for large organizations
+    - Compile data and report
+
+
+### 5.4 - Privacy
+**<u>Privacy Legal Implicaitons</u>**
+- Constantly evolving set of guidelines
+- Local / Regional
+    - State and local government, set privacy limits
+    - Legal info, vehicle registration, medical licensing
+- national
+    - Privacy laws for everyone in country
+    - HIPAA online privacy
+- Global
+    - countries working together for privacy
+
+**<u>Government Data Protection Regulation (GDPR)</u>**
+- EU Regulation
+    - Protection and privacy for EU people
+- Control export of personal data
+    - Users decide where their data foes
+    - request removal of data from search engines
+
+**<u>Data Responsibilites</u>**
+- High level data relationships
+- Data owners
+    - usually organizational responsibility related or not technical
+
+**<u>Data Subject</u>**
+- Any info relating to identified or identifiable natural person
+- Includes everyone
+- laws and Regulations
+    - privacy is idealy defined from perspective of data subject
+
+**<u>Data Roles</u>**
+- Controllers and processors
+**Controller**: Manages purposes and means by which personal data is processed
+**Processor**: Processes data on behalf of controller
+__Good payroll example in video__
+
+**<u>Data Inventory and Retention</u>**
+- What data does organization store
+- Data inventory
+    - Listing of all managed data
+- Internal use
+    - Project collaboration, IT security data quality
+- External use
+    - Select data to share publicly
+    - Follow existing laws and regulations
+
+
