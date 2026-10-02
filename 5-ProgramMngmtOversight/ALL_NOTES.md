@@ -241,3 +241,136 @@
     - Responsible for accuracy, privacy, security
 
 
+### 5.2 - Risk Management
+**<u>Risk Identification</u>**
+- Only certainty is uncertainty
+    - Risk management helps understand potential risk
+- Growth brings risk
+- Get ahead of it
+
+**<u>Performing an Assessment</u>**
+- not all risk requires constant evaluation
+    - Or always required
+- One-time
+    - Assessment part of one-time project
+    - Company acquisition, now equipment
+- Continuous assessments
+    - part of an existing process
+    - Change control requires risk assessments as part of change
+
+**<u>Ad-hoc Assessments</u>**
+- Perform assessment when situation requires
+- Committee is created and risk assessment proceeds
+
+**<u>Recurring Assessment</u>**
+- Recurring assessment
+    - Evaluation occurs on standard intervals
+- An internal assessment
+    - Performed every 3 moths at the beginning of the quarter
+- mandated risk assessment
+    - Required by certain organizations
+    - Some legal requirements will mandate an assessment
+    - PCI DSS requires annual risk assessment
+
+
+
+## 5.2 - Risk Analysis
+**<u>Qualitative Risk Assessment</u>**
+- Identify significant risk factors
+    - Ask opinions about the significance
+    - Display visually with traffic light grid or similar method
+
+**<u>Quantitative Risk Assessment</u>**
+- ARO (Annualized Rate of Occurrence)
+- Asset Value (AV)
+    - Value of an asset to an organization
+    - includes cost of the asset, effect on company sales, potential regulatory fines etc.
+- Exposure factor (EF)
+- % of value lost due to an incident
+- SLE (Single Loss Expectancy)
+    - Monetary loss if a single occurs
+    - Asset Value (AV) * Exposure Factor (EF)
+- ALE (Annualized Loss Expectancy)
+    - Annualized Rate of Occurence (ARO) * SLE
+    - __Laptop Example in Video__
+- Business impact can be more than monetary
+    - Quantitative vs. Qualitative
+
+**<u>Likelihood and Probability</u>**
+- risk likelihood
+    - Qualitative measurement of risk
+    - Statistical measurement
+    - can be based on historical performace
+- often considered similar in scope
+    - Can be used inerchangeable in casual conversation
+
+**<u>Risk Appetite and Tolerance</u>**
+- Risk appetite
+    - Broad description of risk taking deemed acceptable
+    - Amount of accepted risk before taking any action to reduce risk
+- Risk appetite posture
+    - Qualitative description for readiness to take a risk
+    - Conservative, neutral, expansionry
+- Risk tolerance
+    - An acceptable variance (usually larger) from the risk appetitie
+    - __Good appetite vs. tolerance example in video__
+
+**<u>Risk Register</u>**
+- Every project has a plan but also has a risk
+- identify and document the risk
+    - Apply possible solutions to the identified risks
+    - Monitor results
+- key risk indicators
+    - Identify risks that could impact the organization
+- Risk owners (assign someone to own / manage)
+- Risk threshold
+
+
+### 5.2 - Risk Management Strategies
+- Transfer
+    - move risk to another party
+    - purchase cybersecurity insurance
+- Accept
+    - Business decision
+    - Exemption may need approval
+- Accept with exemption
+    - Security policy or regulation cannot be followed
+    - May be based on available security controls, size of organization, label assets, etc.
+    - Exemption may need approval
+- Accept with Exception
+    - Internal Security policies are not applied
+    - Monthly security updates must be applied within 3 calendar days
+        - updates cause critical software to crash
+        - Exception is made to update time frame
+- Avoid
+    - Stop participating in high risk activity
+- Mitigate
+
+**<u>Risk Reporting</u>**
+- Formal document
+    - Identifies risks, detailed info
+- Usually created for senior management
+    - makes decisions regarding resources, budgeting, additional security tasks
+- Commonly includes critical and emerging risks
+    - most important considerations
+
+
+### 5.2 - Business Impact Analysis
+**<u>Recovery</u>**
+- Recovery time Objective (RTO)
+    - Get up and running quickly
+    - What is particular service level to get back to and how long did it take
+- Recovery Point Objective (RPO)
+    - How much data loss is acceptable
+    - Bring system back, hor far back does it go?
+- Mean time to Repair (MTTR)
+    - Average time request to fix an issue
+    - Includes time spent diagnosing
+    - important metric for determining cost and time associated with unplanned outages
+- mean time between failures (MTBF)
+    - Time between outages
+    - Can be used as prediciton or calculated based on historical performace
+    - Total uptime / # of break downs
+    - Statistically plan for possible outages
+
+    
